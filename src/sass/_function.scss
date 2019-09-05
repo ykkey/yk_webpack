@@ -1,0 +1,19 @@
+@function image-url ($url) {
+    @return url("#{$img_dir}#{$url}");
+}
+
+@function getvw($size, $type: "pc"){
+    // $rate: 100 / $tb_width;
+    @if $type == "pc" {
+        @return $size / $pc_fix_width * 100vw;
+    } @else  {
+        @return $size / $sp_fix_width * 100vw;
+    }
+}
+@function getpx-sp($size) {
+    // 調整必要
+    @return ($size / 2) + px ;
+}
+@function get-index($layor-name) {
+    @return index($zindexElement, $layor-name);
+}

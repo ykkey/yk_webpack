@@ -1,0 +1,10 @@
+@import "../../node_modules/reset.css/reset.css";
+
+// SASS
+@import "variable";
+@import "function";
+@import "mixin";
+
+body {
+    background-color: pink;
+}

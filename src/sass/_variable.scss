@@ -1,0 +1,19 @@
+$sp_width: 765;
+$sp_fix_width: 750;
+$pc_fix_width: 1000; //break point and 基準
+$pc_innner_width: 920; 
+
+$pc_breakpoint: 1000; // sp_breakpoint < 変形 <= pc_breakpoint < 固定
+$sp_breakpoint: 750;
+
+// see /src/constants.yml
+$img_dir: '/img/';
+
+
+$black: #000;
+$white: #fff;
+
+
+$hover_time: 0.2s;
+
+// $zindexElement: ;

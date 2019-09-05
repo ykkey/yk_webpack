@@ -1,0 +1,130 @@
+// pc 表示 可変＆固定共通
+@mixin pc-layout {
+    @media (min-width: $sp_breakpoint + 1+px) {
+        @content;
+    }
+}
+// 可変
+@mixin pc-variable {
+    @media screen and (min-width: ($sp_breakpoint + 1+px)) and (max-width: $pc_breakpoint+px) {
+        @content;
+    }
+}
+// sp表示
+@mixin sp-layout {
+    @media (max-width: $sp_breakpoint+px) {
+        @content;
+    }
+}
+
+.is-sp {
+    @include pc-layout {
+        display: none!important;
+    }
+}
+.is-pc {
+    @include sp-layout {
+        display: none!important;
+    }
+}
+
+@mixin setWidth($size, $type: "pc") {
+    @if $type == "sp" {
+        width: ($size / 2)+px;
+        width: $size / $sp_fix_width * 100%;
+        width: getvw($size, $type);
+    }
+    @if $type == "pc" {
+        width: $size+px;
+        @include pc-variable {
+            width: $size / $pc_innner_width * 100%;
+            width: getvw($size, $type);
+        }
+    }
+}
+
+@mixin setHeight($size, $type: "pc") {
+    @if $type == "sp" {
+        height: getvw-sp($size);
+        height: getvw($size, $type);
+    }
+    @if $type == "pc" {
+        height: $size+px;
+        @include pc-variable {
+            height: getvw($size, $type);
+        }
+    }
+}
+
+@mixin setValue($str, $num, $type: "no") {
+    @if $type == "no" {
+        #{$str} : $num+px;
+        @include pc-variable {
+            #{$str} : getvw($num);
+        }
+    }
+    @if $type == "pc" {
+        @include pc-layout {
+            #{$str} : $num+px;
+        }
+        @include pc-variable {
+            #{$str} : getvw($num);
+        }
+    }
+    @if $type == "sp" {
+        #{$str} : ($num / 2)+px;
+        #{$str} : getvw($num,"sp");
+    }
+}
+@mixin img100 {
+    img {
+        display: block;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+    }
+}
+
+@mixin textHidden {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@mixin fontBold {
+    font-weight: 700;
+}
+
+@mixin fontsize($font_size, $type: "pc") {
+    @if $type != "sp" {
+        font-size: $font_size+px;
+    }
+    @if $type == "sp" {
+        font-size: ($font_size / 2)+px;
+        font-size: getvw($font_size, "sp");
+    }
+    @include pc-variable {
+        font-size: getvw($font_size);
+    }
+}
+@mixin element {
+    content: "";
+    display: block;
+    position: absolute;
+}
+@mixin image($path, $width, $height, $type: "pc") {
+    @include setWidth($width, $type);
+    @include setHeight($height, $type);
+    background: image-url($path) center center no-repeat;
+    background-size: contain;
+}
+
+@mixin bg_wall {
+    background: $bg_color1 image-url("common/bgimg1.png");
+}
+@mixin zindex($layor-name) {
+  z-index: get-index($layor-name);
+}
+
+@mixin font {
+    font-family: -apple-system, "Helvetica Neue", "Droid Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Meiryo", "メイリオ", "Osaka", "MS PGothic", arial, sans-serif;
+}
