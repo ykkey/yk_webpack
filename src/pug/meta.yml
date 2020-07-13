@@ -1,18 +1,18 @@
 # このサイト全体のタイトル
-site_name: site name
+site_name: KINTOに新型クロスオーバーSUV「ヤリスクロス」が新登場！｜【KINTO】クルマのサブスク、トヨタから
 og_title: og title
 
 # meta description（og:description・twitter:descriptionでも使用）
-description: site description
+description: KINTOでお得にヤリスクロスを手に入れよう！「買うよりお得、らしい」KINTOに2020年9月新型クロスオーバーSUV「ヤリスクロス」が新登場。
 
 # meta keywords
-keywords: []
+keywords: [ヤリスクロス,ヤリス,トヨタ,キント,KINTO,サブスク,サブスクリプション,リース,フルサービス,愛車,コミコミ,保険,クレジットカード,ポイント,法人,頭金なし,借りる,安全装備,正規ディーラー,気軽,SUV]
 
 orgin_link: ""
-
+base_dir: /lp/yariscross/
 # カノニカル・og:urlなどで使われる、このサイトのURL
 # （複数ページあるサイトでは、全てに同じURLを入れないように）
-url: 
+url: /lp/yariscross/
 
 # Facebook OGP・Twitter cardsで使われる画像 フルURLで指定すること
 ogp_image_url: /ogp.png

@@ -7,24 +7,26 @@ const readConfig = require('read-config')
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 // base config
 const SRC = './src';
-const ROOT = ''
-const DEST = 'dist';
+const ROOT = '/';
+const DEST = '../kinto-jp.com-frontend/html/kinto_one/yariscross/';
+
 // const HOST = process.env.HOST || '0.0.0.0'
 // const PORT = process.env.PORT || 3000
-const BASE_DIR = "/";
-
 const meta = readConfig(`${SRC}/pug/meta.yml`);
 const BASE_DIR = meta.base_dir;
 
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   entry: {
-    'js/script.js': `${SRC}/js/script.js`,
+    '/assets/js/yariscross.js': `${SRC}/js/script.js`,
   },
   output: {
     path: path.resolve(__dirname, DEST),
@@ -92,12 +94,20 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpe?g|png|gif|ico|woff|woff2|eot|ttf|svg|woff|woff2|ttf)(\?[a-z0-9=.]+)?$/,
-        use: [{
-          // loader: 'url-loader?limit=100000&name=img/[name].[ext]',	
-          loader: 'url-loader?limit=100000&name=img/[name].[ext]',
-        }, ],
-      }
+        test: /\.(jpe?g|png|gif|svg)$/,	
+        loader: 'file-loader',	
+        options: {	
+          name: '[path][name].[ext]'	
+        }	
+      },
+      // {
+      //   test: /\.(jpe?g|png|gif|ico|woff|woff2|eot|ttf|svg|woff|woff2|ttf)(\?[a-z0-9=.]+)?$/,
+      //   use: [{
+      //     // loader: 'url-loader?limit=100000&name=img/[name].[ext]',	
+      //     loader: 'url-loader?limit=100000&name=img/[name].[ext]',
+      //   }, ],
+      // }
+
     ],
   },
 
@@ -117,17 +127,16 @@ module.exports = {
       }
     }),
     new MiniCssExtractPlugin({
-      filename: `css/style.css`, //
-      // filename: '[name]',
-    }), ,
+      filename: `assets/css/yariscross.css`,
+    }),
     new CopyWebpackPlugin([{
         from: path.resolve(__dirname, 'src/img/'),
-        to: path.resolve(__dirname, `${DEST}/img/`)
+        to: path.resolve(__dirname,`${DEST}/assets/img/`)
       },
-      {
-        from: path.resolve(__dirname, 'src/font/'),
-        to: path.resolve(__dirname, `${DEST}/font/`)
-      },
+      // {
+      //   from: path.resolve(__dirname, 'src/font/'),
+      //   to: path.resolve(__dirname, `${DEST}/font/`)
+      // },
     ]),
     new ImageminPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,
@@ -141,6 +150,7 @@ module.exports = {
     inline: true, // 自動読み込み
     // openPage: BASE_DIR+"index.html",//自動で指定したページを開く
     contentBase: path.join(__dirname, `./${DEST}`), // HTML等コンテンツのルートディレクトリ
+    contentBase: path.join(__dirname, `./../kinto-jp.com-frontend/html/`),// HTML等コンテンツのルートディレクトリ
     watchContentBase: true, //コンテンツの変更監視をする
     // port: 3000, // ポート番号
   },
