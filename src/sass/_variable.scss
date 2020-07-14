@@ -7,11 +7,13 @@ $pc_breakpoint: 1000; // sp_breakpoint < 変形 <= pc_breakpoint < 固定
 $sp_breakpoint: 750;
 
 // see /src/constants.yml
-$img_dir: '/img/';
+$img_dir: '/lp/yariscross/assets/img/';
 
 
 $black: #000;
 $white: #fff;
+$yellow: #F8D636;
+$bgcolor: #2A2A20;
 
 
 $hover_time: 0.2s;

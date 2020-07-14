@@ -1,0 +1,16 @@
+// lineup module
+.lpyaris__lineup {
+    &_cars {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &_car {
+        text-align: center;
+        width: 50%;
+    }
+    &_car__hdg {
+        font-weight: bold;
+        @include fontEisu;
+        @include fontsize(44);
+    }
+}

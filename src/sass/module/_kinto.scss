@@ -1,0 +1,27 @@
+.p-lpyaris__kinto {
+
+    &Block {
+        border: 8px solid $white;
+        @include pc-layout {
+            padding: 50px 24px 50px 352px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__img {
+            @include pc-layout {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+        &__hdg {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+    }
+}

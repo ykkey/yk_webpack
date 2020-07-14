@@ -97,7 +97,7 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg)$/,	
         loader: 'file-loader',	
         options: {	
-          name: '[path][name].[ext]'	
+          name: '/lp/yariscross/assets/[path][name].[ext]'	
         }	
       },
       // {

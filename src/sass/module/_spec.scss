@@ -1,0 +1,42 @@
+.p-lpyaris__spec {
+    // モーダル用のボタン
+
+    &Button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+        text-decoration: underline;
+        color: #fff;
+        font-size: 16px;
+    }
+
+
+    &Block {
+        position: relative;
+        height: 650px;
+        // 奇数
+        &:nth-child(odd) {
+            background-color: $bgcolor;
+            .p-lpyaris__specBlock__content {
+                margin-left: auto;
+            }
+            .p-lpyaris__specBlock__img {
+                margin-top: -30px;
+            }
+        }
+    }
+    &Block__content {
+        @include pc-layout{
+            width: 50%;
+            padding-left: 30px;
+        }
+    }
+    &Block__img {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}

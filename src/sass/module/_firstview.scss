@@ -1,0 +1,56 @@
+// first view
+.p-lpyaris__mv {
+    // background width 100% bottom
+    background: image-url('mv/bg_over.jpg') center bottom no-repeat;
+    background-size: cover;
+    .p-lpyaris__inner {
+        height: 700px;
+        padding-top: 50px;
+    }
+
+    &Title {
+        display: block;
+        width: (1542px / 2);
+        @include img100;
+    }
+    &Car {
+        width: (1244px / 2);
+        @include img100;
+        position: relative;
+        img {
+            position: relative;
+        }
+        &:before {
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            right: -10px;
+            background: image-url('mv/img_car_shadow.png') center center no-repeat;
+            background-size: contain;
+            width: (1317px / 2);
+            height: (568px / 2);
+        }
+    }
+    &Debut {
+        background: image-url('mv/bg_debut.png') center center no-repeat;
+        background-size: contain;
+        width: (1275px / 2);
+        height: (315px / 2);
+        position: relative;
+        img {
+            display: block;
+            width: 53.7%;
+            height: auto;
+            -webkit-backface-visibility: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+}
+
+
+// 

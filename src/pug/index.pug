@@ -4,5 +4,188 @@ extends /temp/_base
 
 //- append javascript-block
 
+
+//- メンバーシップの登録部分
+mixin membership 
+  .p-lpyaris__blockMemeber
+    p.p-lpyaris__buttonWrp
+      a.p-lpyaris__button(href="" target="_blank") メンバーシップ登録はコチラ
+    p.p-lpyaris__footnote ※メンバーシップ登録された方にはヤリスクロスに関する最新の情報をお届けします。
+
+
 block content-block
-  p test
+  //- ヤリスクロスティザーLP コンテンツ
+  .p-lpyaris
+    section.p-lpyaris__mv
+      .p-lpyaris__inner
+        h1.p-lpyaris__mvTitle
+          img(src="./assets/img/mv/txt_title.png", width="1542" , height="368", alt="KINTOに新型クロスオーバーSUV「ヤリスクロス」が 新登場 !")
+        p.p-lpyaris__mvDebut
+          img(src="./assets/img/mv/txt_debut.png", width="685" , height="160", alt="2020年9月初旬 DEBUT")
+        p.p-lpyaris__mvCar
+          img(src="./assets/img/mv/img_car.png", width="1244" , height="827", alt="")
+
+    // ヤリスクロスを手に入れよう！
+    section.p-lpyaris__spec
+      h2.p-lpyaris__titlee KINTOでお得に<br>ヤリスクロスを手に入れよう！
+      p 「買うよりお得、らしい」KINTOに2020年9月新型クロスオーバーSUV<br>「ヤリスクロス」が新登場。
+
+      .p-lpyaris__specBlock
+        .p-lpyaris__specBlock__inner
+          .p-lpyaris__specBlock__content
+            h3.p-lpyaris__specBlock__hdg 力強い<br>プロポーション
+            p.p-lpyaris__specBlock__txt 大きなタイヤでアウトドアテイストを出し<br>ながらも、美しく洗練されたデザイン！
+            button.p-lpyaris__specButton.js-modal--lpyaris 類似車種との比較はこちら
+
+          .p-lpyaris__specBlock__img
+            img(src="./assets/img/spec/img_spec01.png", width="700" , height="439", alt="ヤリスクロス")
+      .p-lpyaris__specBlock
+        .p-lpyaris__specBlock__inner
+
+          .p-lpyaris__specBlock__content
+            h3.p-lpyaris__specBlock__hdg たっぷり<br>積める
+            p.p-lpyaris__specBlock__txt コンパクトなのに、たっぷり積める！クラストップクラスの荷室容量！
+            button.p-lpyaris__specButton.js-modal--lpyaris 類似車種との比較はこちら
+
+          .p-lpyaris__specBlock__img
+            img(src="./assets/img/spec/img_spec02.png", width="598" , height="415", alt="ヤリスクロス")
+
+      .p-lpyaris__specBlock
+        .p-lpyaris__specBlock__inner
+          .p-lpyaris__specBlock__content
+            h3.p-lpyaris__specBlock__hdg 選べる2つの<br>エンジン
+            p.p-lpyaris__specBlock__txt
+              |コンパクトSUVの中でもトップクラスの低燃費を実現した<br>
+              |・1.5L　ハイブリッドエンジン<br>
+              |快適な走りと低燃費の両方を叶える<br>
+              |・1.5L　ガソリンエンジン
+            button.p-lpyaris__specButton.js-modal--lpyaris 類似車種との比較はこちら
+
+          .p-lpyaris__specBlock__img
+            img(src="./assets/img/spec/img_spec03.png", width="532" , height="377", alt="ヤリスクロス")
+
+      //- メンバーシップ登録
+      +membership
+
+
+    // KINTOの特徴
+    section.p-lpyaris__kinto
+      .p-lpyaris__inner
+        h2.p-lpyaris__title
+          |KINTOの特徴
+          span.p-lpyaris__titleGuide Feature
+        .p-lpyaris__kintoBlock
+          p.p-lpyaris__kintoBlock__img
+            img(src="./assets/img/kinto/img_kinto01.png", width="320" , height="110", alt="頭金0円、コミコミ定額")
+          .p-lpyaris__kintoBlock__con
+            p.p-lpyaris__kintoBlock__hdg 頭金0円、コミコミ定額
+            p.p-lpyaris__kintoBlock__txt 月額費用には、車両代以外に、 充実の自動車保険料、メンテナンス料、車検、税金等が含まれます。支払いもクレジットカードだから、ポイントが貯まってお得。※車検は5年/7年プランのみ
+
+        .p-lpyaris__kintoBlock
+          p.p-lpyaris__kintoBlock__img
+            img(src="./assets/img/kinto/img_kinto02.png", width="320" , height="108", alt="WEBで契約まで完了")
+          .p-lpyaris__kintoBlock__con
+            p.p-lpyaris__kintoBlock__hdg WEBで契約まで完了
+            p.p-lpyaris__kintoBlock__txt スマホやパソコンから24時間いつでもお申込み・ご契約まで可能です。<br>お店に行くのはクルマを受け取る時のみです。
+
+        .p-lpyaris__kintoBlock
+          p.p-lpyaris__kintoBlock__img
+            img(src="./assets/img/kinto/img_kinto03.png", width="320" , height="159", alt="気軽に乗り換え可能")
+          .p-lpyaris__kintoBlock__con
+            p.p-lpyaris__kintoBlock__hdg 気軽に乗り換え可能
+            p.p-lpyaris__kintoBlock__txt 契約プランは3年/5年/7年から。契約途中でも、一定期間経過後は乗り換え可能。あなたの趣向や生活に合わせ気軽にクルマを変更できます。
+        //- メンバーシップ登録
+        +membership
+
+    // ヤリスクロス×KINTOがお得な理由
+    section.p-lpyaris__reason
+      .p-lpyaris__inner
+        h2.p-lpyaris__title
+          |ヤリスクロス×KINTOがお得な理由
+          span.p-lpyaris__titleGuide Reason for profit
+        .p-lpyaris__reasonBlock
+          .p-lpyaris__reasonItem
+            p.p-lpyaris__reason__hdg 一般的な車
+            p.p-lpyaris__reason__img
+              img(src="./assets/img/reason/img_reason_normal.png", width="" , height="", alt="一般的な車のグラフ")
+            p.p-lpyaris__reason__graf
+              img(src="./assets/img/reason/img_reason_normal_grh.png", width="" , height="", alt="一般的な車のグラフ")
+            p.p-lpyaris__reason__itemtxt クルマにかかる費用の合計例.車両代、税金、保険、メンテナンス代
+
+          .p-lpyaris__reasonItem
+            p.p-lpyaris__reason__hdg ヤリスクロス
+            p.p-lpyaris__reason__img
+              img(src="./assets/img/reason/img_reason_yarisuc.png", width="" , height="", alt="一般的な車のグラフ")
+            p.p-lpyaris__reason__graf
+              img(src="./assets/img/reason/img_reason_yarisc_grh.png", width="" , height="", alt="ヤリスクロスのグラフ")
+            p.p-lpyaris__reason__itemtxt 残価が高い分、月々のご負担額がお得！
+        p.p-lpyaris__reason__txt
+          |ヤリスクロスに乗るなら実はKINTOがお得だって知っていますか？<br>
+          |KINTOの月額料金は残価（契約期間終了後のクルマの価値）が高ければ高いほどお得になります！<br>
+          |ヤリスクロスなどのSUVは比較的残価が高いのでお得な月額料金で乗れちゃうんです！
+
+        //- メンバーシップ登録
+        +membership
+
+    // 魅力のSUVラインアップ
+    section.p-lpyaris__lineup
+      .p-lpyaris__inner
+        h2.p-lpyaris__title
+          |魅力のSUVラインアップ
+          span.p-lpyaris__titleNote ※3年プランの場合
+        .lpyaris__lineup_cars
+          .lpyaris__lineup_car
+            p.lpyaris__lineup_car__hdg LAND CRUISER
+            p.lpyaris__lineup_car__sub SUVの頂点に立つ風格と存在感
+            p.lpyaris__lineup_car__img
+              img(src="./assets/img/lineup/img_lineup_land.png.png", width="" , height="", alt="LAND CRUISER")
+            p.lpyaris__lineup_car__price
+              |月学
+              spna.lpyaris__lineup_car__priceNum 88,000
+              |円 (税込) 〜
+            p.lpyaris__lineup_car__detail
+              a.p-lpyaris__link(href="#") ランドクルーザーの詳細はこちら
+        
+          .lpyaris__lineup_car
+            p.lpyaris__lineup_car__hdg HARRIER
+            p.lpyaris__lineup_car__sub エレガントで洗練されたスタイリング
+            p.lpyaris__lineup_car__img
+              img(src="./assets/img/lineup/img_lineup_harrier.png", width="" , height="", alt="HARRIER")
+            p.lpyaris__lineup_car__price
+              |月学
+              spna.lpyaris__lineup_car__priceNum 61,600
+              |円 (税込) 〜
+            p.lpyaris__lineup_car__detail
+              a.p-lpyaris__link(href="#") ハリアーの詳細はこちら
+
+          .lpyaris__lineup_car
+            p.lpyaris__lineup_car__hdg RAIZE
+            p.lpyaris__lineup_car__sub コンパクトSUVながら堂々とした存在感
+            p.lpyaris__lineup_car__img
+              img(src="./assets/img/lineup/img_lineup_raize.png", width="" , height="", alt="RAIZE")
+            p.lpyaris__lineup_car__price
+              |月学
+              spna.lpyaris__lineup_car__priceNum 39,820
+              |円 (税込) 〜
+            p.lpyaris__lineup_car__detail
+              a.p-lpyaris__link(href="#") RAIZEの詳細はこちら
+
+          .lpyaris__lineup_car
+            p.lpyaris__lineup_car__hdg RAV4
+            p.lpyaris__lineup_car__sub 力強くタフなSUVらしいフォルム
+            p.lpyaris__lineup_car__img
+              img(src="./assets/img/lineup/img_lineup_rav4.png", width="" , height="", alt="RAV4")
+            p.lpyaris__lineup_car__handling RAV4の取り扱いは<br>現在停止しております
+
+          .lpyaris__lineup_car
+            p.lpyaris__lineup_car__hdg C-HR
+            p.lpyaris__lineup_car__sub 先進的かつ個性的な目を引くデザイン
+            p.lpyaris__lineup_car__img
+              img(src="./assets/img/lineup/img_lineup_chr.png", width="" , height="", alt="C-HR")
+            p.lpyaris__lineup_car__handling C-HRの取り扱いは<br>現在停止しております
+        //- メンバーシップ登録
+        +membership
+
+    // バナー
+    section.p-lpyaris__banner
+

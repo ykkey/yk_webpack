@@ -4,7 +4,10 @@
 @import "variable";
 @import "function";
 @import "mixin";
+@import "layout";
 
-body {
-    background-color: pink;
-}
+
+@import "module/firstview";
+@import "module/spec";
+@import "module/kinto";
+@import "module/lineup";
