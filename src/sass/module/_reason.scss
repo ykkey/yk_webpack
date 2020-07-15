@@ -64,7 +64,16 @@
                 width: auto;
             }
         }
-        
+    }
+    &__graf {
+        @include img100;
+        @include setValue(margin-bottom, 12, "sp");
+        @include pc-layout {
+            margin-bottom: 16px;
+            img {
+                width: auto;
+            }
+        }
     }
     &__itemtxt {
         @include fontBold;

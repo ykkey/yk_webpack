@@ -67,19 +67,6 @@ scroll first だけアニメーション
             top: 5%;
             left: 5%;
         }
-        img {
-            &.p-lpyaris__show--pc {
-                display: none;
-                @include pc-layout {
-                    display: block;
-                }
-            }
-            &.p-lpyaris__show--sp {
-                @include pc-layout {
-                    display: none;
-                }
-            }
-        }
     }
     &Car {
         @include img100;

@@ -14,6 +14,7 @@
     &Block {
         border: 8px solid $white;
         padding: getvw(30, "sp") getvw(15, "sp");
+        @include setValue(margin-bottom,38);
         @include pc-layout {
             padding: 50px 24px 50px 352px;
             margin-bottom: 30px;

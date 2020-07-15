@@ -29,7 +29,6 @@
         @include bgBiagonal;
         &--01 {
             @include setValue(padding-top, 87);
-            
             @include pc-layout {
                 padding-top: ($borderHeight / 2);
             }
@@ -68,6 +67,7 @@
             @include setValue(padding-top, 74);
             @include pc-layout {
                 padding-top: ($borderHeight / 2);
+                margin-bottom: 200px;
             }
             &:before {
                 background: image-url('bg/back_g_l.png') left top no-repeat;
@@ -76,7 +76,6 @@
             .p-lpyaris__specBlock__content {
                 margin-left: auto;
             }
-            margin-bottom: 200px;
             .p-lpyaris__specBlock__img {
                 left: -9%;
             }

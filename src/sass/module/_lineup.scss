@@ -1,19 +1,15 @@
 // lineup module
 .p-lpyaris__lineup {
     background-color: $bgcolor;
-    padding-top: $borderHeight;
     position: relative;
+    @include pc-layout {
+        padding-top: $borderHeight;
+    }
+    @include bgBiagonal;
     &:before {
-        display: block;
-        content: "";
-        position: absolute;
-        height: $borderHeight;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: $borderHeight + px;
         // TODO: 斜め逆に変更
         background: image-url('bg/back_g_r.png') left top no-repeat;
+        background-size: 100% 100%;
     }
     &_cars {
         @include pc-layout {

@@ -82,6 +82,17 @@
         width: 100%;
         -webkit-backface-visibility: hidden;
         height: auto;
+        &.p-lpyaris__show--pc {
+            display: none;
+            @include pc-layout {
+                display: block;
+            }
+        }
+        &.p-lpyaris__show--sp {
+            @include pc-layout {
+                display: none;
+            }
+        }
     }
 }
 
