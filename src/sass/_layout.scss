@@ -79,20 +79,39 @@
     &__button {
         text-align: center;
         display: block;
-        font-weight: bold;
         color: #000;
         background-color: $yellow;
-        padding: 35px 0;
         text-align: center;
         text-decoration: none;
+        position: relative;
+        padding: getvw(15, "sp") 0 ;
         @include setWidth(300, "sp");
         @include fontsize(16,"sp");
         margin: getvw(45, "sp") auto getvw(10, "sp");
         @include fontBold;
         @include pc-layout {
+            padding: 30px 0;
             font-size: 24px;
             width: 600px;
             margin: 60px auto 24px auto;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            @include setValue(width, 8, "sp");
+            @include setValue(height, 15, "sp");
+            @include setValue(right, 20);
+            top: 50%;
+            transform: translate(0, -50%);
+            background: image-url('btn/ico_arrow.svg') center center no-repeat;
+            background-size: contain;
+            @include pc-layout {
+                width: 10px;
+                height: 19px;
+                right: 20px;
+            }
         }
 
         // TODO: 黄色ボタンhover追加

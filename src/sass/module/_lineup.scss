@@ -28,9 +28,20 @@
             width: 50%;
             margin-bottom: 90px;
         }
+
+        // 販売していないもの
+        &--disabled {
+            .p-lpyaris__lineup_car__sub,
+            .p-lpyaris__lineup_car__hdg {
+                opacity: .5;
+            }
+        }
     }
     &_car__img {
         @include img100;
+        @include pc-layout {
+            margin: 35px 0 20px;
+        }
         img {
             @include pc-layout {
                 width: auto;

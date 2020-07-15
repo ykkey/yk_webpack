@@ -36,6 +36,11 @@
             @include setValue(padding-top, 30);
             @include setValue(margin-top, 30);
             border-top: 1px solid $gray;
+            @include pc-layout {
+                padding-top: 0;
+                margin-top: 0;
+                border-top: none;
+            }
         }
 
     }

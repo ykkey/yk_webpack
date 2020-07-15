@@ -3,6 +3,10 @@
     // 普通のリンクに変更
     &BtnWrp {
         @include setValue(margin-bottom, 50);
+        @include pc-layout {
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
     }
     &Button {
         background-color: transparent;
@@ -123,5 +127,8 @@
             font-size: 130px;
             left: -20px;
         }
+    }
+    &Intro {
+        text-align: center;
     }
 }
