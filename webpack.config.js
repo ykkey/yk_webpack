@@ -16,7 +16,7 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 // base config
 const SRC = './src';
 const ROOT = '/';
-const DEST = '../kinto-jp.com-frontend/html/kinto_one/yariscross/';
+const DEST = '../kinto-jp.com-frontend/html/lp/yariscross/';
 
 // const HOST = process.env.HOST || '0.0.0.0'
 // const PORT = process.env.PORT || 3000

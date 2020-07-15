@@ -1,6 +1,9 @@
 .p-lpyaris__spec {
     // モーダル用のボタン
-
+    // 普通のリンクに変更
+    &BtnWrp {
+        @include setValue(margin-bottom, 50);
+    }
     &Button {
         background-color: transparent;
         border: none;
@@ -10,33 +13,115 @@
         appearance: none;
         text-decoration: underline;
         color: #fff;
-        font-size: 16px;
+        &:hover {
+            color: #ccc;
+        }
+        @include pc-layout {
+            font-size: 16px;
+        }
     }
 
-
     &Block {
-        position: relative;
-        height: 650px;
-        // 奇数
-        &:nth-child(odd) {
+        @include bgBiagonal;
+        &--01 {
+            @include setValue(padding-top, 87);
+            
+            @include pc-layout {
+                padding-top: ($borderHeight / 2);
+            }
+            .p-lpyaris__specBlock__img {
+                @include pc-layout {
+                    left: -21%;
+                }
+            }
+            .p-lpyaris__specBlock__content {
+                @include pc-layout {
+                    margin-left: auto;
+                }
+            }
+        }
+        &--02 {
+            @include setValue(padding-top, 100);
+            @include setValue(padding-bottom, 40);
+
+            @include pc-layout {
+                padding-top: $borderHeight;
+                padding-bottom: 0;
+            }
+            &:before {
+                background: image-url('bg/back_g_r.png') left top no-repeat;
+                background-size: 100% 100%;
+            }
             background-color: $bgcolor;
+            .p-lpyaris__specBlock__img {
+                @include pc-layout {
+                    margin-top: -100px;
+                    left: 50%;
+                }
+            }
+        }
+        &--03 {
+            @include setValue(padding-top, 74);
+            @include pc-layout {
+                padding-top: ($borderHeight / 2);
+            }
+            &:before {
+                background: image-url('bg/back_g_l.png') left top no-repeat;
+                background-size: 100% 100%;
+            }
             .p-lpyaris__specBlock__content {
                 margin-left: auto;
             }
+            margin-bottom: 200px;
             .p-lpyaris__specBlock__img {
-                margin-top: -30px;
+                left: -9%;
             }
         }
+    }
+    &Block__inner {
+        position: relative;
+        margin: auto;
+        z-index: 2;
     }
     &Block__content {
         @include pc-layout{
             width: 50%;
-            padding-left: 30px;
+            padding-left: 60px;
         }
     }
     &Block__img {
+        @include img100;
+        @include pc-layout {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &Block__hdg {
+        position: relative;
+        @include fontBold;
+        @include fontsize(30,"sp");
+        @include setValue(padding-left, 100,"sp");
+        @include setValue(margin-bottom, 30,"sp");
+        @include pc-layout {
+            font-size: $fontLL + px;
+            padding-left: 120px;
+            margin-bottom: 20px;
+        }
+    }
+    &Block__hdgNo {
+        color: $point;
+        @include fontEisu;
+        font-weight: normal;
         position: absolute;
         top: 50%;
         transform: translate(0, -50%);
+        left: 0;
+        @include fontsize(90, "sp");
+        @include pc-layout {
+            font-size: 130px;
+            left: -20px;
+        }
     }
 }

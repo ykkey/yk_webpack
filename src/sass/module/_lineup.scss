@@ -1,16 +1,68 @@
 // lineup module
-.lpyaris__lineup {
+.p-lpyaris__lineup {
+    background-color: $bgcolor;
+    padding-top: $borderHeight;
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        height: $borderHeight;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: $borderHeight + px;
+        // TODO: 斜め逆に変更
+        background: image-url('bg/back_g_r.png') left top no-repeat;
+    }
     &_cars {
-        display: flex;
-        flex-wrap: wrap;
+        @include pc-layout {
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
     &_car {
-        text-align: center;
-        width: 50%;
+        @include setValue(margin-bottom, 53);
+        @include pc-layout {
+            text-align: center;
+            width: 50%;
+            margin-bottom: 90px;
+        }
+    }
+    &_car__img {
+        @include img100;
+        img {
+            @include pc-layout {
+                width: auto;
+            }
+        }
     }
     &_car__hdg {
         font-weight: bold;
         @include fontEisu;
-        @include fontsize(44);
+        @include fontsize(24,"sp");
+        @include pc-layout {
+            font-size: 44px;
+        }
+    }
+    &_car__sub {
+        @include fontBold;
+    }
+    &_car__price {
+        @include setValue(margin-bottom, 5, "sp");
+    }
+    &_car__priceNum {
+        @include fontsize(36, "sp");
+        @include fontEisu;
+        @include pc-layout {
+            font-size: 44px;
+        }
+    }
+    &_car__price,
+    &_car__detail {
+        text-align: center;
+    }
+    &_car__handling  {
+        text-align: center;
     }
 }

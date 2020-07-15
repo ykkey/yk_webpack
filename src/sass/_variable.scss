@@ -1,10 +1,12 @@
-$sp_width: 765;
-$sp_fix_width: 750;
-$pc_fix_width: 1000; //break point and 基準
-$pc_innner_width: 920; 
+$sp_in_width: 335;
+$sp_fix_width: 375;
+// $sp_fix_width: 335;
+
+$pc_fix_width: 1008; //break point and 基準
+$pc_innner_width: 984; 
 
 $pc_breakpoint: 1000; // sp_breakpoint < 変形 <= pc_breakpoint < 固定
-$sp_breakpoint: 750;
+$sp_breakpoint: 835;
 
 // see /src/constants.yml
 $img_dir: '/lp/yariscross/assets/img/';
@@ -14,8 +16,20 @@ $black: #000;
 $white: #fff;
 $yellow: #F8D636;
 $bgcolor: #2A2A20;
+$point: #FFF8D0;
+$gray : #ccc;
 
 
 $hover_time: 0.2s;
 
 // $zindexElement: ;
+
+
+// font size
+
+$fontLL: 42;
+$fontL: 24;
+$fontM: 20;
+$fontN: 18;
+
+$borderHeight: 350px;

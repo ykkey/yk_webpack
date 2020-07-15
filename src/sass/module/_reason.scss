@@ -1,0 +1,78 @@
+.p-lpyaris__reason {
+
+    padding-top: $borderHeight;
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        height: $borderHeight;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: $borderHeight + px;
+        // TODO: 斜め逆に変更
+        background: image-url('bg/back_g_l.png') left top no-repeat;
+        background-size: 100% 100%;
+    }
+    &Block {
+        @include pc-layout {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &Item {
+        text-align: center;
+        @include setValue(margin-top, 50);
+        @include pc-layout {
+            margin-top: 0;
+            width: 452px;
+        }
+        // 可変
+        @include pc-variable {
+            @include setWidth(452);
+        }
+        &--yarisuc {
+            @include setValue(padding-top, 30);
+            @include setValue(margin-top, 30);
+            border-top: 1px solid $gray;
+        }
+
+    }
+    &__hdg {
+        @include fontBold;
+        @include pc-layout {
+            font-size: $fontL+px;
+        }
+    }
+    &__img {
+        @include setValue(margin-bottom, 30);
+        @include setValue(margin-top, 30);
+        @include pc-layout {
+            margin: 80px 0;
+        }
+        img {
+            display: block;
+            width: 70%;
+            margin: 0 auto;
+            @include pc-layout {
+                width: auto;
+            }
+        }
+        
+    }
+    &__itemtxt {
+        @include fontBold;
+        text-align: left;
+        @include pc-layout {
+            font-size: $fontL + px;
+        }
+    }
+    &__txt {
+        @include setValue(margin-top, 25);
+        @include pc-layout {
+            font-size: $fontM + px;
+            margin-top: 100px;
+        }
+    }
+}

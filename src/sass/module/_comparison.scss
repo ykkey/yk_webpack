@@ -1,0 +1,43 @@
+
+// 徹底比較
+.p-lpyaris__com {
+    padding-top: ($borderHeight / 1.3);
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: $borderHeight;
+        width: 100%;
+        left: 0;
+        top: -50px;
+        z-index: 1;
+        background: image-url('bg/back_g_l.png') left top no-repeat;
+        background-size: 100% 100%;
+    }
+    &Visual {
+        text-align: center;
+    }
+    &Block {
+        @include setValue(margin-bottom, 40, "sp");
+        @include setValue(margin-top, 40, "sp");
+        @include pc-layout {
+            margin-bottom: 80px;
+            margin-top: 80px;
+        }
+    }
+    &Block__hdg {
+        @include fontBold;
+        @include fontsize(20, "sp");
+        @include setValue(margin-bottom,25, "sp");
+        @include pc-layout {
+            margin-bottom: 50px;
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+    &Block__img {
+        margin-bottom: 30px;
+        @include img100;
+    }
+}

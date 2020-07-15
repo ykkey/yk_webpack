@@ -30,8 +30,8 @@
 
 @mixin setWidth($size, $type: "pc") {
     @if $type == "sp" {
-        width: ($size / 2)+px;
-        width: $size / $sp_fix_width * 100%;
+        width: $size +px;
+        width: $size / $sp_in_width * 100%;
         width: getvw($size, $type);
     }
     @if $type == "pc" {
@@ -97,7 +97,7 @@
 
 @mixin fontEisu {
     // TODO: 英数字の設定
-    font-family: serif;
+    font-family: 'Oswald' , serif;
 }
 
 @mixin fontsize($font_size, $type: "pc") {
@@ -105,7 +105,7 @@
         font-size: $font_size+px;
     }
     @if $type == "sp" {
-        font-size: ($font_size / 2)+px;
+        font-size: $font_size + px;
         font-size: getvw($font_size, "sp");
     }
     @include pc-variable {
@@ -133,4 +133,21 @@
 
 @mixin font {
     font-family: -apple-system, "Helvetica Neue", "Droid Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Meiryo", "メイリオ", "Osaka", "MS PGothic", arial, sans-serif;
+}
+// 斜め背景
+@mixin  bgBiagonal{
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: -50px;
+        z-index: 1;
+        height: ($borderHeight / 2.5);
+        @include pc-layout {
+            height: $borderHeight;
+        }
+    }
 }

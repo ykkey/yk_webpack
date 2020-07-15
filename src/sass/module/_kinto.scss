@@ -1,7 +1,19 @@
 .p-lpyaris__kinto {
-
+    background-color: $bgcolor;
+    position: relative;
+    @include setValue(padding-top, 90);
+    @include pc-layout {
+        padding-top: $borderHeight;
+    }
+    @include bgBiagonal;
+    &:before {
+        // TODO: 斜め逆に変更
+        background: image-url('bg/back_g_r.png') left top no-repeat;
+        background-size: 100% 100%;
+    }
     &Block {
         border: 8px solid $white;
+        padding: getvw(30, "sp") getvw(15, "sp");
         @include pc-layout {
             padding: 50px 24px 50px 352px;
             margin-bottom: 30px;
@@ -11,6 +23,8 @@
             margin-bottom: 0;
         }
         &__img {
+            @include img100;
+            @include setValue(margin-bottom, 40, "sp");
             @include pc-layout {
                 position: absolute;
                 left: 0;

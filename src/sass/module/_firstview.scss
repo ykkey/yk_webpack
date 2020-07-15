@@ -1,22 +1,97 @@
+/*
+動きは全体的にがさつ
+
+animation 背景支店切り替え
+カクカクした動き
+opacity だけスムーズに、、、したいないぁ
+
+scroll first だけアニメーション
+
+背景
+黒　透過png(fix)　＞　グレー 黒　透過png　＞　木.jpg(fix)
+グレーを斜めから動かす
+黒でマッピング
+
+
+// その他
+グレー画像は透けてるのにしない、黒とグレーで固定
+
+長めに作って、動かすだけ。
+マスクなし
+
+
+/_/ 動き
+
+1. blockand section :: opacity -> 1  
+1. before要素 :: ガタガタ斜めに合わせて移動
+2.inner:: 中身fadein＋上
+画像もついでspeckだけは
+他はいらない
+
+---*/
+
+
 // first view
+.p-lpyaris__inner--mv {
+    background-color: rgba(0, 0, 0, .65);
+    border: 15px solid rgba($yellow, .65);
+    position: relative;
+    height: (286 / $sp_fix_width * 100vw);
+    @include pc-layout {
+        height: (896px / 2);
+    }
+}
 .p-lpyaris__mv {
-    // background width 100% bottom
     background: image-url('mv/bg_over.jpg') center bottom no-repeat;
     background-size: cover;
-    .p-lpyaris__inner {
+    padding: 10px;
+    padding: (10 / $sp_fix_width * 100vw);
+    @include setValue(margin-bottom, 150, "sp");
+    @include pc-layout {
         height: 700px;
+        padding: 0;
         padding-top: 50px;
+        margin-bottom: 50px;
     }
 
     &Title {
         display: block;
-        width: (1542px / 2);
         @include img100;
+        position: absolute;
+        // TODO: パーセント計算
+        @include setWidth(313,"sp");
+        @include setValue(left, 10, "sp");
+        @include setValue(top, 38, "sp");
+        @include pc-layout {
+            width: (1542px / 2);
+            top: 5%;
+            left: 5%;
+        }
+        img {
+            &.p-lpyaris__show--pc {
+                display: none;
+                @include pc-layout {
+                    display: block;
+                }
+            }
+            &.p-lpyaris__show--sp {
+                @include pc-layout {
+                    display: none;
+                }
+            }
+        }
     }
     &Car {
-        width: (1244px / 2);
         @include img100;
-        position: relative;
+        position: absolute;
+        @include setWidth(310, "sp");
+        @include setValue(right, -5, "sp");
+        @include setValue(bottom, -135, "sp");
+        @include pc-layout {
+            width: (1244px / 2);
+            right: -5%;
+            bottom: -55%;
+        }
         img {
             position: relative;
         }
@@ -24,20 +99,36 @@
             display: block;
             content: "";
             position: absolute;
-            bottom: -20px;
-            right: -10px;
             background: image-url('mv/img_car_shadow.png') center center no-repeat;
             background-size: contain;
-            width: (1317px / 2);
-            height: (568px / 2);
+            width: 100%;
+            height: 100px;
+            bottom: 0;
+            right: -20px;
+            @include pc-layout {
+                bottom: -20px;
+                right: -10px;
+                width: (1317px / 2);
+                height: (568px / 2);
+            }
         }
     }
     &Debut {
         background: image-url('mv/bg_debut.png') center center no-repeat;
         background-size: contain;
-        width: (1275px / 2);
-        height: (315px / 2);
-        position: relative;
+        // TODO 計算
+        position: absolute;
+        @include setValue(top, 140, "sp");
+        @include setValue(left, -10, "sp");
+        @include setValue(height, 80, "sp");
+        @include setWidth(347, "sp");
+        @include pc-layout {
+            width: (1275px / 2);
+            height: (315px / 2);
+            left: -8%;
+            top: 45%;
+        }
+
         img {
             display: block;
             width: 53.7%;
@@ -52,5 +143,3 @@
 
 }
 
-
-// 

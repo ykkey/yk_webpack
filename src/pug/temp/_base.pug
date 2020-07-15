@@ -61,6 +61,18 @@ html(lang="ja")
       //- wwwやhttps、getパラメータなど、微妙に違うURLでアクセスされても、使われるURLをひとつに絞れる
       link(rel="canonical" href=meta.url)
 
+    link(rel="stylesheet" href="/assets/css/base.css")
+    link(rel="stylesheet" href="/assets/css/layout.css")
+    link(rel="stylesheet" href="/assets/css/module.css")
+    link(rel="stylesheet" href="/assets/css/utility.css")
+    link(rel="stylesheet" href="/assets/style/style.css")
+    link(rel="stylesheet" href="/customer/assets/css/main.css")
+    script(src="/customer/assets/js/jquery-3.4.1.min.js")
+    script(src="/hf/assets/js/writeContent.js")
+    script(src="/hf/assets/js/writeGlonav.js")
+    script(src="/assets/js/common.js")
+    script(src="/assets/javascripts/app.js")
+
     // stylesheet
     block stylesheet-block
     //- link(rel="stylesheet", href="css/style.css")
@@ -123,17 +135,16 @@ html(lang="ja")
       block content-block
 
       //- フッターパンくず
-      .l_breadcrumb
-        ul.l_breadcrumb_inner
-          li.l_breadcrumb_item
-            a(href='../../') ホーム
-          li.l_breadcrumb_item
-            a(href='../') KINTO ONEとは
-          li.l_breadcrumb_item
-            | おクルマのご返却時について
-        // /.l_breadcrumb
-      p.l_pagetop
-        a.l_pagetop_btn(href='#pagetop') PAGE TOP
+      .l_staticContent
+        .l_breadcrumb
+          ul.l_breadcrumb_inner
+            li.l_breadcrumb_item
+              a(href='../../') ホーム
+            li.l_breadcrumb_item
+              | KINTOに新型クロスオーバーSUV「ヤリスクロス」が新登場
+          // /.l_breadcrumb
+        p.l_pagetop
+          a.l_pagetop_btn(href='#pagetop') PAGE TOP
 
       #footerContainer(data-src='/customer/footer')
       .l_overlay.js_overlay
