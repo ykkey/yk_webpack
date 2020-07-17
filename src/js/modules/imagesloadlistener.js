@@ -1,4 +1,4 @@
-
+// 画像の読み込み
 var imagesLoadListener = (function() {
     var imageCollector = function(expectedCount, completeFn) {
         var receivedCount = 0;
@@ -27,3 +27,5 @@ var imagesLoadListener = (function() {
     };
     return imagesLoadListener;
 })();
+
+/lp/yariscross/assets/img/spec/img_spec02@2x.png

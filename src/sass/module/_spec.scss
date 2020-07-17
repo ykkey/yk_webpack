@@ -39,6 +39,7 @@
             }
             .p-lpyaris__specBlock__img {
                 @include pc-layout {
+                    width: 700px;
                     left: -21%;
                 }
             }
@@ -60,6 +61,7 @@
                 @include pc-layout {
                     margin-top: -60px;
                     left: 50%;
+                    width: 598px;
                 }
             }
         }
@@ -79,6 +81,9 @@
             }
             .p-lpyaris__specBlock__img {
                 left: -9%;
+                @include pc-layout {
+                    width: 532px;
+                }
             }
         }
     }
