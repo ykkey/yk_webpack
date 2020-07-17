@@ -26,7 +26,7 @@ const BASE_DIR = meta.base_dir;
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   entry: {
-    '/assets/js/yariscross.js': `${SRC}/js/script.js`,
+    'assets/js/yariscross.js': `${SRC}/js/script.js`,
   },
   output: {
     path: path.resolve(__dirname, DEST),

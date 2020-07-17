@@ -3,13 +3,7 @@
     position: relative;
     @include setValue(padding-top, 90);
     @include pc-layout {
-        padding-top: $borderHeight;
-    }
-    @include bgBiagonal;
-    &:before {
-        // TODO: 斜め逆に変更
-        background: image-url('bg/back_g_r.png') left top no-repeat;
-        background-size: 100% 100%;
+        padding-top: 260px;
     }
     &Block {
         border: 8px solid $white;

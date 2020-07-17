@@ -22,7 +22,7 @@ $gray : #ccc;
 
 $hover_time: 0.2s;
 
-// $zindexElement: ;
+$zindexElement: fv_bg,fv_in, sec_bg, inner;
 
 
 // font size
@@ -32,4 +32,7 @@ $fontL: 24;
 $fontM: 20;
 $fontN: 18;
 
-$borderHeight: 350px;
+$borderHeight: 340px;
+
+$easeAni: cubic-bezier(0.55, 0.085, 0.68, 0.53);// easeInQuad 最初遅く- > 早く // 背景用
+$easeAni2:  cubic-bezier(0.165, 0.84, 0.44, 1); // easeOutQuart 

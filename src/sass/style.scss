@@ -3,6 +3,7 @@
 // SASS
 @import "variable";
 @import "function";
+@import "keyframes";
 @import "mixin";
 @import "layout";
 
@@ -13,4 +14,5 @@
 @import "module/lineup";
 @import "module/reason";
 @import "module/comparison";
-
+@import "module/banner";
+@import "module/scroll_animate";

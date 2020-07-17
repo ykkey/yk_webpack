@@ -9,7 +9,7 @@ extends /temp/_base
 mixin membership
   .p-lpyaris__blockMemeber
     p.p-lpyaris__buttonWrp
-      a.p-lpyaris__button(href="/customer/membership") メンバーシップ登録はコチラ
+      a.p-lpyaris__button(href="/customer/membership") メンバーシップ登録はこちら
     p.p-lpyaris__footnote ※メンバーシップ登録された方にはヤリスクロスに関する最新の情報をお届けします。
 
 
@@ -17,12 +17,14 @@ block content-block
   //- ヤリスクロスティザーLP コンテンツ
   .p-lpyaris
     section.p-lpyaris__mv
-      .p-lpyaris__inner.p-lpyaris__inner--mv
-        h1.p-lpyaris__mvTitle
-          img.p-lpyaris__show--pc(src="./assets/img/mv/txt_title.png", width="1542" , height="368", alt="KINTOに新型クロスオーバーSUV「ヤリスクロス」が 新登場 !")
-          img.p-lpyaris__show--sp(src="./assets/img/mv/txt_title_sp.png", width="626" , height="215", alt="KINTOに新型クロスオーバーSUV「ヤリスクロス」が 新登場 !")
-        p.p-lpyaris__mvDebut
-          img(src="./assets/img/mv/txt_debut.png", width="685" , height="160", alt="2020年9月初旬 DEBUT")
+      .p-lpyaris__mvBg
+      .p-lpyaris__inner
+        .p-lpyaris__inner--mv
+          h1.p-lpyaris__mvTitle
+            img.p-lpyaris__show--pc(src="./assets/img/mv/txt_title.png", width="1542" , height="368", alt="KINTOに新型クロスオーバーSUV「ヤリスクロス」が 新登場 !")
+            img.p-lpyaris__show--sp(src="./assets/img/mv/txt_title_sp.png", width="626" , height="215", alt="KINTOに新型クロスオーバーSUV「ヤリスクロス」が 新登場 !")
+          p.p-lpyaris__mvDebut
+            img(src="./assets/img/mv/txt_debut.png", width="685" , height="160", alt="2020年9月初旬 DEBUT")
         p.p-lpyaris__mvCar
           img(src="./assets/img/mv/img_car.png", width="1244" , height="827", alt="")
 
@@ -43,7 +45,7 @@ block content-block
               a.p-lpyaris__specButton(href="#comparison") 類似車種との比較はこちら
           .p-lpyaris__specBlock__img
             img(src="./assets/img/spec/img_spec01.png", width="700" , height="439", alt="ヤリスクロス")
-      .p-lpyaris__specBlock.p-lpyaris__specBlock--02.js-lpyarisFadeIn
+      .p-lpyaris__specBlock.p-lpyaris__specBlock--02.p-lpyaris__section--even.p-lpyaris__bdbg--right.js-lpyarisFadeIn
         .p-lpyaris__specBlock__inner.p-lpyaris__inner
           .p-lpyaris__specBlock__content
             h3.p-lpyaris__specBlock__hdg
@@ -51,12 +53,12 @@ block content-block
               |たっぷり<br>積める
             p.p-lpyaris__specBlock__txt コンパクトなのに、たっぷり積める！<br>クラストップクラスの荷室容量！
             p.p-lpyaris__specBtnWrp
-              a.p-lpyaris__specButton(href="#com") 類似車種との比較はこちら
+              a.p-lpyaris__specButton(href="#comparison") 類似車種との比較はこちら
 
           .p-lpyaris__specBlock__img
             img(src="./assets/img/spec/img_spec02.png", width="598" , height="415", alt="ヤリスクロス")
 
-      .p-lpyaris__specBlock.p-lpyaris__specBlock--03.js-lpyarisFadeIn
+      .p-lpyaris__specBlock.p-lpyaris__specBlock--03.p-lpyaris__section--odd.p-lpyaris__bdbg--right.js-lpyarisFadeIn
         .p-lpyaris__specBlock__inner.p-lpyaris__inner
           .p-lpyaris__specBlock__content
             h3.p-lpyaris__specBlock__hdg
@@ -68,18 +70,15 @@ block content-block
               |快適な走りと低燃費の両方を叶える<br>
               |・1.5L　ガソリンエンジン
             p.p-lpyaris__specBtnWrp
-              a.p-lpyaris__specButton(href="#com") 類似車種との比較はこちら
-
+              a.p-lpyaris__specButton(href="#comparison") 類似車種との比較はこちら
           .p-lpyaris__specBlock__img
             img(src="./assets/img/spec/img_spec03.png", width="532" , height="377", alt="ヤリスクロス")
-
       .p-lpyaris__inner
         //- メンバーシップ登録
         +membership
 
-
     // KINTOの特徴
-    section.p-lpyaris__kinto
+    section.p-lpyaris__kinto.p-lpyaris__bdbg--left.p-lpyaris__section--even.js-lpyarisFadeIn
       .p-lpyaris__inner
         h2.p-lpyaris__title
           |KINTOの特徴
@@ -109,7 +108,7 @@ block content-block
           +membership
 
     // ヤリスクロス×KINTOがお得な理由
-    section.p-lpyaris__reason
+    section.p-lpyaris__reason.p-lpyaris__bdbg--left.p-lpyaris__section--odd.js-lpyarisFadeIn
       .p-lpyaris__inner
         h2.p-lpyaris__title
           |ヤリスクロス×<br class="p-lpyaris__show--sp">KINTOがお得な理由
@@ -130,7 +129,7 @@ block content-block
               img(src="./assets/img/reason/img_reason_yarisuc.png", width="" , height="", alt="一般的な車のグラフ")
             p.p-lpyaris__reason__graf
               img.p-lpyaris__show--pc(src="./assets/img/reason/img_reason_yarisc_grh.png", width="" , height="", alt="ヤリスクロスのグラフ")
-              img.p-lpyaris__show--sp(src="./assets/img/reason/img_reason_normal_grh_sp.png", width="" , height="", alt="一般的な車のグラフ")
+              img.p-lpyaris__show--sp(src="./assets/img/reason/img_reason_yarisc_grh_sp.png", width="" , height="", alt="一般的な車のグラフ")
             p.p-lpyaris__reason__itemtxt 残価が高い分、月々のご負担額がお得！
         p.p-lpyaris__reason__txt
           |ヤリスクロスに乗るなら実はKINTOがお得だって知っていますか？<br>
@@ -145,7 +144,7 @@ block content-block
           p.p-lpyaris__footnote ※ヤリスクロスだけでなくKINTOには魅力的でお得なSUVが豊富！こちらも合わせてご検討ください！
 
     // 魅力のSUVラインアップ
-    section.p-lpyaris__lineup
+    section.p-lpyaris__lineup.p-lpyaris__bdbg--right.p-lpyaris__section--even.js-lpyarisFadeIn
       .p-lpyaris__inner
         h2.p-lpyaris__title
           |魅力の<br class="p-lpyaris__show--sp">SUVラインアップ
@@ -157,7 +156,7 @@ block content-block
             p.p-lpyaris__lineup_car__img
               img(src="./assets/img/lineup/img_lineup_land.png.png", width="" , height="", alt="LAND CRUISER")
             p.p-lpyaris__lineup_car__price
-              |月学
+              |月額
               spna.p-lpyaris__lineup_car__priceNum 88,000
               |円 (税込) 〜
             p.p-lpyaris__lineup_car__detail
@@ -169,7 +168,7 @@ block content-block
             p.p-lpyaris__lineup_car__img
               img(src="./assets/img/lineup/img_lineup_harrier.png", width="" , height="", alt="HARRIER")
             p.p-lpyaris__lineup_car__price
-              |月学
+              |月額
               spna.p-lpyaris__lineup_car__priceNum 61,600
               |円 (税込) 〜
             p.p-lpyaris__lineup_car__detail
@@ -181,7 +180,7 @@ block content-block
             p.p-lpyaris__lineup_car__img
               img(src="./assets/img/lineup/img_lineup_raize.png", width="" , height="", alt="RAIZE")
             p.p-lpyaris__lineup_car__price
-              |月学
+              |月額
               spna.p-lpyaris__lineup_car__priceNum 39,820
               |円 (税込) 〜
             p.p-lpyaris__lineup_car__detail
@@ -204,7 +203,7 @@ block content-block
         +membership
 
     // 徹底比較
-    section.p-lpyaris__com#comparison
+    section.p-lpyaris__com.p-lpyaris__bdbg--right.p-lpyaris__section--odd.js-lpyarisFadeIn#comparison
       .p-lpyaris__inner
         h2.p-lpyaris__title
           |ヤリスクロス×他SUV車 徹底比較
@@ -231,6 +230,8 @@ block content-block
             img(src="./assets/img/com/img_com_size.png", width="" , height="", alt="荷室の広さを比較")
           p.p-lpyaris__com__txt ヤリスクロスはコンパクトSUVの中ではトップクラスの荷室容量なので荷物をたくさん積んでのお出かけにも最適です！
 
-    // バナー
-    section.p-lpyaris__banner
+        p.p-lpyaris__banner
+          img.p-lpyaris__show--pc(src="./assets/img/bnr/bnr_ft.png", width="900" , height="200", alt="banner")
+          img.p-lpyaris__show--sp(src="./assets/img/bnr/bnr_ft_sp.png", width="335" , height="120", alt="banner")
+
 

@@ -1,11 +1,7 @@
 
 // 徹底比較
 .p-lpyaris__com {
-    @include bgBiagonal;
-    &:before {
-        background: image-url('bg/back_g_l.png') left top no-repeat;
-        background-size: 100% 100%;
-    }
+    @include setValue(padding-top, 130);
     @include pc-layout {
         padding-top: ($borderHeight / 1.3);
     }

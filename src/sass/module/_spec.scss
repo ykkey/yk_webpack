@@ -1,6 +1,12 @@
 .p-lpyaris__spec {
     // モーダル用のボタン
     // 普通のリンクに変更
+    background-color: $black;
+    @include setValue(padding-top, 30, "sp");
+    @include pc-layout {
+        padding-top: 50px;
+    }
+
     &BtnWrp {
         @include setValue(margin-bottom, 50);
         @include pc-layout {
@@ -26,7 +32,6 @@
     }
 
     &Block {
-        @include bgBiagonal;
         &--01 {
             @include setValue(padding-top, 87);
             @include pc-layout {
@@ -44,29 +49,25 @@
             }
         }
         &--02 {
-            @include setValue(padding-top, 100);
+            @include setValue(padding-top, 130);
             @include setValue(padding-bottom, 40);
 
             @include pc-layout {
                 padding-top: $borderHeight;
                 padding-bottom: 0;
             }
-            &:before {
-                background: image-url('bg/back_g_r.png') left top no-repeat;
-                background-size: 100% 100%;
-            }
-            background-color: $bgcolor;
             .p-lpyaris__specBlock__img {
                 @include pc-layout {
-                    margin-top: -100px;
+                    margin-top: -60px;
                     left: 50%;
                 }
             }
         }
         &--03 {
-            @include setValue(padding-top, 74);
+            @include setValue(padding-top, 100);
             @include pc-layout {
-                padding-top: ($borderHeight / 2);
+                // padding-top: ($borderHeight / 2);
+                padding-top: 230px;
                 margin-bottom: 200px;
             }
             &:before {
@@ -84,7 +85,8 @@
     &Block__inner {
         position: relative;
         margin: auto;
-        z-index: 2;
+        @include zindex(inner);
+
     }
     &Block__content {
         @include pc-layout{
@@ -128,6 +130,8 @@
         }
     }
     &Intro {
-        text-align: center;
+        @include pc-layout {
+            text-align: center;
+        }
     }
 }

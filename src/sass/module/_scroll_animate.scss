@@ -1,0 +1,142 @@
+
+// 斜め背景
+@mixin  bgBiagonal{
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        @include zindex(sec_bg);
+        height: 0;
+        padding-top: (340 / 1500 * 100%);
+        @include pc-layout {
+            padding-top: 0;
+            height: 340px;
+        }
+    }
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0px;
+        @include zindex(sec_bg);
+    }
+    // animation start
+    
+}
+// animation start
+.is-lpyaris_fadeIn {
+    &.p-lpyaris__section--odd ,
+    &.p-lpyaris__section--even {
+        &:after {
+            animation: bg_mask .25s $easeAni 0s 1 alternate;
+            animation-fill-mode: forwards;
+            @include pc-layout {
+                animation: bg_mask .4s $easeAni 0s 1 alternate;
+                animation-fill-mode: forwards;
+            }
+        }
+        .p-lpyaris__inner {
+            animation: fade_inner .5s $easeAni2 0.25s 1;
+            animation-fill-mode: forwards;
+        }
+    }
+    &.p-lpyaris__specBlock--01 {
+        .p-lpyaris__inner {
+            animation: fade_inner .5s $easeAni2 0.25s 1;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+.p-lpyaris__specBlock--01,
+.p-lpyaris__section--odd ,
+.p-lpyaris__section--even { 
+    .p-lpyaris__inner {
+        opacity: 0;
+    }
+}
+
+// 背景色
+.p-lpyaris__section--odd {
+    @include bgBiagonal;
+    background-color: $black;
+    &:after {
+        background-color: $bgcolor;
+    }
+}
+// カーキ
+.p-lpyaris__section--even {
+    @include bgBiagonal;
+    background-color: $bgcolor;
+    &:after {
+        background-color: $black;
+    }
+}
+// 右から左へのアニメーション
+.p-lpyaris__bdbg--right {
+    // border背景
+    &:before {
+    }
+    &:after {
+        left: 0;
+
+    }
+}
+
+// 左から右へのアニメーション
+.p-lpyaris__bdbg--left {
+    &:after {
+        right: 0;
+    }
+}
+
+// 黒色背景
+.p-lpyaris__bdbg--left.p-lpyaris__section--odd {
+    &:before {
+        background: image-url('bg/back_b_l.png') left top no-repeat;
+        background-size: 100% 100%;
+    }
+}
+.p-lpyaris__bdbg--right.p-lpyaris__section--odd {
+    &:before {
+        background: image-url('bg/back_b_r.png') left top no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+// カーキー色背景
+.p-lpyaris__bdbg--left.p-lpyaris__section--even {
+    &:before {
+        background: image-url('bg/back_o_l.png') left top no-repeat;
+        background-size: 100% 100%;
+    }
+}
+.p-lpyaris__bdbg--right.p-lpyaris__section--even {
+    &:before {
+        background: image-url('bg/back_o_r.png') left top no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+
+// spec　アニメーション
+// 中身ずらして表示
+.p-lpyaris__specBlock {
+    .p-lpyaris__specBlock__img {
+        @include pc-layout {
+            opacity: 0;
+        }
+    }
+    &.is-lpyaris_fadeIn {
+        .p-lpyaris__specBlock__img {
+            @include pc-layout {
+                animation: fade_specImg .5s $easeAni2 0.45s 1;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}

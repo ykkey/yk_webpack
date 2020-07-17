@@ -1,19 +1,7 @@
 .p-lpyaris__reason {
-
-    padding-top: $borderHeight;
-    position: relative;
-    &:before {
-        display: block;
-        content: "";
-        position: absolute;
-        height: $borderHeight;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: $borderHeight + px;
-        // TODO: 斜め逆に変更
-        background: image-url('bg/back_g_l.png') left top no-repeat;
-        background-size: 100% 100%;
+    @include setValue(padding-top, 100);
+    @include pc-layout {
+        padding-top: $borderHeight;
     }
     &Block {
         @include pc-layout {
@@ -23,7 +11,7 @@
     }
     &Item {
         text-align: center;
-        @include setValue(margin-top, 50);
+        @include setValue(margin-top, 40);
         @include pc-layout {
             margin-top: 0;
             width: 452px;
