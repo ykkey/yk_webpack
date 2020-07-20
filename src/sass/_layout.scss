@@ -2,17 +2,22 @@
 * {
     box-sizing: border-box;
 }
+
 .p-lpyaris {
     // ベースを黒くする
     // background-color: #000;
     color: #fff;
     line-height: 1.7;
+    @include font;
     @include fontsize(16, "sp");
 
     @include pc-layout {
         font-size: $fontN + px;
     }
 
+    a {
+        @include font;
+    }
     //link
     &__link {
         color: #fff;
@@ -46,10 +51,10 @@
         }
     }
     &__title {
-        font-weight: bold;
         line-height: 1.5;
         @include setValue(margin-bottom, 30);
         @include fontsize(30, "sp");
+        @include fontBold;
         @include pc-layout {
             font-size: 42px;
             text-align: center;

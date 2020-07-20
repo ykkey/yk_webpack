@@ -1,1 +1,21 @@
-// font　設定
+@font-face {
+    font-family: "Oswald";
+    font-weight: 400;
+    src: url("./../fonts/Oswald-Medium.woff2") format("woff2"),
+        url("./../fonts/Oswald-Medium.woff") format("woff"),
+        url("./../fonts/Oswald-Medium.eot") format("eot"),
+}
+
+@font-face {
+    font-family: 'NotoSansJP';
+    font-weight: 400;
+    src: url("./../fonts/NotoSansJP-Light.woff2") format("woff2"),
+        url("./../fonts/NotoSansJP-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'NotoSansJP';
+    font-weight: 700;
+    src: url("./../fonts/NotoSansJP-Bold.woff2") format("woff2"),
+        url("./../fonts/NotoSansJP-Bold.woff") format("woff");
+}

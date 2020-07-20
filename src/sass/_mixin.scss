@@ -108,7 +108,8 @@
 
 @mixin fontEisu {
     // TODO: 英数字の設定
-    font-family: 'Oswald' , serif;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
 }
 
 @mixin fontsize($font_size, $type: "pc") {
@@ -143,5 +144,5 @@
 }
 
 @mixin font {
-    font-family: -apple-system, "Helvetica Neue", "Droid Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Meiryo", "メイリオ", "Osaka", "MS PGothic", arial, sans-serif;
+    font-family: 'NotoSansJP', -apple-system, "Helvetica Neue", "Droid Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Meiryo", "メイリオ", "Osaka", "MS PGothic", arial, sans-serif;
 }

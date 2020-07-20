@@ -134,8 +134,8 @@ module.exports = {
         to: path.resolve(__dirname,`${DEST}/assets/img/`)
       },
       {
-        from: path.resolve(__dirname, 'src/font/'),
-        to: path.resolve(__dirname, `${DEST}/assets/font/`)
+        from: path.resolve(__dirname, 'src/fonts/'),
+        to: path.resolve(__dirname, `${DEST}/assets/fonts/`)
       },
     ]),
     new ImageminPlugin({
