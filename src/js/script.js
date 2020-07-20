@@ -17,7 +17,7 @@ new imageLoad({
     callback: function() {
         setTimeout(() => {
             document.getElementsByClassName("p-lpyaris__mv")[0].classList.add("is-lpyaris_fadeIn");
-        },200);
+        },300);
     }
 });
 

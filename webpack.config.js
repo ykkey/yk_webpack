@@ -133,10 +133,10 @@ module.exports = {
         from: path.resolve(__dirname, 'src/img/'),
         to: path.resolve(__dirname,`${DEST}/assets/img/`)
       },
-      // {
-      //   from: path.resolve(__dirname, 'src/font/'),
-      //   to: path.resolve(__dirname, `${DEST}/font/`)
-      // },
+      {
+        from: path.resolve(__dirname, 'src/font/'),
+        to: path.resolve(__dirname, `${DEST}/assets/font/`)
+      },
     ]),
     new ImageminPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,
