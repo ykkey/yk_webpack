@@ -32,50 +32,58 @@ scroll first だけアニメーション
 
 
 // first view
-
 // animation 部分
+.is-lpyaris_fadeIn {
 
-// 車
-.p-lpyaris__mvCar {
-    animation: fv_car .7s $easeAni2 0s;
-    animation-fill-mode: forwards;
-    &:before {
-        animation: fv_car_shadow .7s $easeAni2 0s;
+    .p-lpyaris__mvCar {
+        animation: fv_car .7s $easeAni2 0s;
+        animation-fill-mode: forwards;
+        &:before {
+            animation: fv_car_shadow .7s $easeAni2 0s;
+        }
+    }
+    .p-lpyaris__mvBg {
+        &:before {
+            animation: bg_firstview .6s $easeAni2 0.65s;
+            animation-fill-mode: forwards;
+        }
+        &:after {
+            animation: bg_firstview_f .6s $easeAni2 0.5s;
+            animation-fill-mode: forwards;
+        }
+    }
+    // 枠
+    .p-lpyaris__inner--mv {
+        animation: fv_inner .5s ease .4s;
+        animation-fill-mode: forwards;
+    }
+    .p-lpyaris__mvTitle {
+        animation: fv_inner .5s ease .6s;
+        animation-fill-mode: forwards;
+    }
+    .p-lpyaris__mvDebut {
+        animation: fv_inner .5s ease .7s;
+        animation-fill-mode: forwards;
     }
 }
 // 土部分
 .p-lpyaris__mvBg {
     &:before {
         opacity: 0;
-        animation: bg_firstview .6s $easeAni2 .92s;
-        animation: bg_firstview .6s $easeAni2 0.65s;
-        animation-fill-mode: forwards;
     }
     &:after {
         opacity: 0;
-        animation: bg_firstview_f .6s $easeAni2 .85s;
-        animation: bg_firstview_f .6s $easeAni2 0.5s;
-        animation-fill-mode: forwards;
     }
 }
 
-// 枠
-.p-lpyaris__inner--mv {
-    animation: fv_inner .5s ease .4s;
-    animation-fill-mode: forwards;
-}
 // タイトル
 .p-lpyaris__mvTitle {
     opacity: 0;
-    animation: fv_inner .5s ease .6s;
-    animation-fill-mode: forwards;
 
 }
 // Debut予告
 .p-lpyaris__mvDebut {
     opacity: 0;
-    animation: fv_inner .5s ease .7s;
-    animation-fill-mode: forwards;
 }
 
 

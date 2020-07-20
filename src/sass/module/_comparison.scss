@@ -2,6 +2,7 @@
 // 徹底比較
 .p-lpyaris__com {
     @include setValue(padding-top, 130);
+    padding-bottom: 1px; // bannerが無いので
     @include pc-layout {
         padding-top: ($borderHeight / 1.3);
     }
