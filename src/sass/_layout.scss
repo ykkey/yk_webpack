@@ -85,6 +85,7 @@
         text-align: center;
         text-decoration: none;
         position: relative;
+        cursor: pointer;
         padding: getvw(15, "sp") 0 ;
         @include setWidth(300, "sp");
         @include fontsize(16,"sp");
