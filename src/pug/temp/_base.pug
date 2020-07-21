@@ -15,10 +15,6 @@ html(lang="ja")
       meta(name="description", content=meta.description)
     if meta.keywords && meta.keywords.length
       meta(name="keywords", content=meta.keywords.join ? meta.keywords.join(', ') : meta.keywords)
-    if meta.favicon_url
-      link(rel="shortcut icon", href=meta.favicon_url, type="image/vnd.microsoft.icon")
-      link(rel="icon", href=meta.favicon_url, type="image/vnd.microsoft.icon")
-
     //- IEで「互換モード」で表示されるのを防ぐための指定
     meta(http-equiv="X-UA-Compatible", content="IE=Edge")
 
@@ -60,6 +56,11 @@ html(lang="ja")
       //- このページをはてぶ・シェアする際、使われるべきURLを明示する指定
       //- wwwやhttps、getパラメータなど、微妙に違うURLでアクセスされても、使われるURLをひとつに絞れる
       link(rel="canonical" href=meta.url)
+
+    link(rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/img/ic_favicon_001_180.png")
+    link(rel="shortcut icon" href="/assets/img/ic_favicon_001.ico")
+    link(rel="icon" sizes="16x16" href="/assets/img/ic_favicon_001_16.png")
+    link(rel="icon" sizes="32x32" href="/assets/img/ic_favicon_001_32.png")
 
     link(rel="stylesheet" href="/assets/style/style.css")
     link(rel="stylesheet" href="/customer/assets/css/main.css")
@@ -124,7 +125,7 @@ html(lang="ja")
       iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-ND8HQTX', height='0', width='0', style='display:none;visibility:hidden')
     // End Google Tag Manager (noscript)
     #glonav(data-src='/customer/header')
-    #pageContentsTop.l_wrap.js_wrap(data-navid='kintoOne')
+    #pageContentsTop
       //- コンテンツ内容
       block content-block
 

@@ -156,7 +156,7 @@ module.exports = {
   },
   // キャッシュ
   cache: true,
-
+  performance: { hints: false }// limit
 };
 
 // portfinder.getPort(function (err, port) {
