@@ -5,6 +5,7 @@
     @include setValue(padding-top, 30, "sp");
     @include pc-layout {
         padding-top: 50px;
+        overflow: hidden;
     }
 
     &BtnWrp {

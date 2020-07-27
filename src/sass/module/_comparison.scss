@@ -8,6 +8,16 @@
     }
     &Visual {
         text-align: center;
+        @include img100;
+        img {
+            width: 95%;
+            margin: 0 auto;
+        }
+        @include pc-layout {
+            img {
+                width: auto;
+            }
+        }
     }
     &Block {
         @include setValue(margin-bottom, 40, "sp");

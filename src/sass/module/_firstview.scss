@@ -102,6 +102,7 @@ scroll first だけアニメーション
     position: relative;
     padding: 10px;
     padding: (10 / $sp_fix_width * 100vw);
+    overflow: hidden;
     @include setValue(padding-bottom, 150,"sp");
     @include pc-layout {
         // height: 700px;
@@ -171,8 +172,7 @@ scroll first だけアニメーション
         @include setValue(left, 10, "sp");
         @include setValue(top, 38, "sp");
         @include pc-layout {
-            // width: (1542px / 2);
-            width: 810px;
+            width: 776px;
             top: 5%;
             left: 5%;
         }

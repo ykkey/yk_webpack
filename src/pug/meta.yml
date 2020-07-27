@@ -15,7 +15,7 @@ base_dir: /lp/yariscross/
 url: https://kinto-jp.com/lp/yariscross/
 
 # Facebook OGP・Twitter cardsで使われる画像 フルURLで指定すること
-ogp_image_url: https://kinto-jp.com/assets/img/pic_ogimage_002.jpg
+ogp_image_url: https://kinto-jp.com/lp/yariscross/assets/img/ogp.png
 
 # Facebookアプリのapp id（入れないとWarningが出る）
 # facebook_app_id: 99999999999
