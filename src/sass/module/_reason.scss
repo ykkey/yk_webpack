@@ -14,12 +14,36 @@
         @include setValue(margin-top, 40);
         @include pc-layout {
             margin-top: 0;
-            width: 452px;
+            width: 471px;
         }
-        // 可変
         @include pc-variable {
-            @include setWidth(452);
+            //47.86585%
+            //46.72619vw
+            // @include setWidth(471);
+            width: 47.86585%;
+            // @include setValue(width, 471);
+
         }
+        // 一般的な車
+        &--normal {
+            .p-lpyaris__reason__graf {
+                position: relative;
+                @include pc-layout {
+                    &:after {
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        width: 42px;
+                        height: 153px;
+                        background: image-url('reason/img_reason_grafline.png') center center no-repeat;
+                        background-size: contain;
+                        bottom: 0;
+                        right: -42px;
+                    }
+                }
+            }
+        }
+        // ヤリスクロス
         &--yarisuc {
             @include setValue(padding-top, 30);
             @include setValue(margin-top, 30);

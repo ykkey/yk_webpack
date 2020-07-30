@@ -10,8 +10,7 @@ mixin membership
   .p-lpyaris__blockMemeber
     p.p-lpyaris__buttonWrp
       a.p-lpyaris__button(href="/customer/membership") メンバーシップ登録はこちら
-    p.p-lpyaris__footnote ※メンバーシップ登録をされた方にはヤリスクロス等に関する最新の情報をお届けします
-
+    p.p-lpyaris__footnote 無料会員登録をするとヤリスクロス等の発売時期、価格等の最新情報を受け取れます。
 
 block content-block
   //- ヤリスクロスティザーLP コンテンツ
@@ -115,7 +114,7 @@ block content-block
           |ヤリスクロス×<br class="p-lpyaris__show--sp">KINTOがお得な理由
           span.p-lpyaris__titleGuide Reason for profit
         .p-lpyaris__reasonBlock
-          .p-lpyaris__reasonItem
+          .p-lpyaris__reasonItem.p-lpyaris__reasonItem--normal
             p.p-lpyaris__reason__hdg 一般的な車
             p.p-lpyaris__reason__img
               img(src="./assets/img/reason/img_reason_normal.png", width="" , height="", alt="一般的な車のグラフ")
@@ -237,7 +236,8 @@ block content-block
           p.p-lpyaris__com__txt ヤリスクロスはコンパクトSUVの中ではトップクラスの荷室容量なので荷物をたくさん積んでのお出かけにも最適です！
 
         //- p.p-lpyaris__banner
-        //-   img.p-lpyaris__show--pc(src="./assets/img/bnr/bnr_ft.png", width="900" , height="200", alt="banner")
-        //-   img.p-lpyaris__show--sp(src="./assets/img/bnr/bnr_ft_sp.png", width="335" , height="120", alt="banner")
+        //-   a.p-lpyaris__bannerLink(href="https://kinto-jp.com/contents/column/20200729-1.html")
+        //-     img.p-lpyaris__show--pc(src="./assets/img/bnr/bnr_ft.png", width="900" , height="200", alt="banner")
+        //-     img.p-lpyaris__show--sp(src="./assets/img/bnr/bnr_ft_sp.png", width="335" , height="120", alt="banner")
 
 
