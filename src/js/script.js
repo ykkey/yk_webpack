@@ -2,7 +2,6 @@ import "../sass/style.scss";
 
 import imageLoad from './modules/imageLoad';
 import scrollFadeIn from './modules/scrollfadein.js';
-
 const PATH_IMG = "/lp/yariscross/assets/img/";
 var pre = window.devicePixelRatio >= 2 ? ((window.innerWidth || document.documentElement.clientWidth || 0) < 835 ? "_sp" : "@2x") : "";
 new imageLoad({

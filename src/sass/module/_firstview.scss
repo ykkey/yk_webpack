@@ -1,40 +1,6 @@
-/*
-動きは全体的にがさつ
-
-animation 背景支店切り替え
-カクカクした動き
-opacity だけスムーズに、、、したいないぁ
-
-scroll first だけアニメーション
-
-背景
-黒　透過png(fix)　＞　グレー 黒　透過png　＞　木.jpg(fix)
-グレーを斜めから動かす
-黒でマッピング
-
-
-// その他
-グレー画像は透けてるのにしない、黒とグレーで固定
-
-長めに作って、動かすだけ。
-マスクなし
-
-
-/_/ 動き
-
-1. blockand section :: opacity -> 1  
-1. before要素 :: ガタガタ斜めに合わせて移動
-2.inner:: 中身fadein＋上
-画像もついでspeckだけは
-他はいらない
-
----*/
-
-
 // first view
 // animation 部分
 .is-lpyaris_fadeIn {
-
     .p-lpyaris__mvCar {
         animation: fv_car .7s $easeAni2 0s;
         animation-fill-mode: forwards;
@@ -108,7 +74,7 @@ scroll first だけアニメーション
         // height: 700px;
         padding: 0;
         padding-top: 50px;
-        padding-bottom: 247px;
+        padding-bottom: 280px;
     }
     .p-lpyaris__inner {
         padding: 0;
@@ -172,9 +138,9 @@ scroll first だけアニメーション
         @include setValue(left, 10, "sp");
         @include setValue(top, 38, "sp");
         @include pc-layout {
-            width: 776px;
+            width: 823px;
             top: 5%;
-            left: 5%;
+            left: 3.5%;
         }
     }
     &Car {
@@ -182,13 +148,13 @@ scroll first だけアニメーション
         position: absolute;
         @include setWidth(310, "sp");
         @include setValue(right, -5, "sp");
-        @include setValue(bottom, -135, "sp");
+        @include setValue(bottom, -120, "sp");
         opacity: 0;
         @include pc-layout {
             // width: (1244px / 2);
             width: 680px;
-            right: -5%;
-            bottom: -60%;
+            right: -1%;
+            bottom: -53.5%;
         }
         img {
             position: relative;
@@ -216,7 +182,7 @@ scroll first だけアニメーション
         background-size: contain;
         // TODO 計算
         position: absolute;
-        @include setValue(top, 140, "sp");
+        @include setValue(top, 130, "sp");
         @include setValue(left, -10, "sp");
         @include setValue(height, 87, "sp");
         @include setWidth(351, "sp");
@@ -226,15 +192,14 @@ scroll first だけアニメーション
             left: -8%;
             top: 50%;
         }
-
         img {
             display: block;
-            width: (826 / 1275 * 100%);
+            width: (819 / 1275 * 100%);
             height: auto;
             -webkit-backface-visibility: hidden;
             position: absolute;
             top: 48%;
-            left: 50%;
+            left: 51%;
             transform: translate(-50%,-50%);
         }
     }
