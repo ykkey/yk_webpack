@@ -88,7 +88,7 @@
         cursor: pointer;
         padding: getvw(15, "sp") 0 ;
         @include setWidth(300, "sp");
-        @include fontsize(16,"sp");
+        @include fontsize(15,"sp");
         margin: getvw(45, "sp") auto getvw(10, "sp");
         @include fontBold;
         @include pc-layout {
