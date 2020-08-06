@@ -1,5 +1,9 @@
 .p-lpyaris__banner {
     @include img100;
+    @include setValue(margin-top, 24, "sp");
+    @include pc-layout {
+        margin-top: 136px;
+    }
     img {
         margin: 0 auto;
     }
