@@ -1,6 +1,4 @@
-// image load 
 // 画像読み込み制御
-// export default cla
 export default class imageLoad {
   constructor(opts = {}) {
     this.targetElement = opts.targetElement;

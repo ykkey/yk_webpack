@@ -74,6 +74,13 @@ block content-block
           .p-lpyaris__specBlock__img
             img(src="./assets/img/spec/img_spec03.png", srcset="./assets/img/spec/img_spec03.png 1x, ./assets/img/spec/img_spec03@2x.png 2x", width="532" , height="377", alt="エンジン")
       .p-lpyaris__inner
+        .p-lpyaris__btnModalWrp(data-module="modal")
+          button.p-lpyaris__btnModal.js-openModal(data-modal="toggle")
+            | 簡易諸元表はこちら
+          .m-modal__item.p-lpyaris__modal_item(data-modal="content")
+            .p-lpyaris__modal_body
+              figure.m-pic__normal
+                img(src="./assets/img/spec/img_table.png" alt="簡易諸元表")
         //- メンバーシップ登録
         +membership
 
@@ -234,9 +241,13 @@ block content-block
           p.p-lpyaris__comBlock__img
             img(src="./assets/img/com/img_com_size.png", srcset="./assets/img/com/img_com_size.png 1x, ./assets/img/com/img_com_size@2x.png 2x" width="" , height="", alt="荷室の広さを比較")
           p.p-lpyaris__com__txt ヤリスクロスはコンパクトSUVの中ではトップクラスの荷室容量なので荷物をたくさん積んでのお出かけにも最適です！
-
+        
+        .p-lpyaris__video.
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/rTVF_ls1-2w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
         p.p-lpyaris__banner
           a.p-lpyaris__bannerLink(href="https://kinto-jp.com/contents/column/20200729-1.html")
             img(src="./assets/img/bnr/bnr_ft.png", width="900" , height="200", alt="新型車「ヤリスクロス」を徹底解剖！新型コンパクトSUV「ヤリスクロス」の気になる特徴は？")
 
-
+        //- メンバーシップ登録
+        +membership

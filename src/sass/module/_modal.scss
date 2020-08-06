@@ -1,0 +1,25 @@
+.p-lpyaris__modal {
+
+    &_item {
+        width: calc(100vw - 2.4rem);
+        height: auto;
+        max-height: calc(100vh - 6rem);
+        margin-top: 3rem;
+        overflow-y: auto;
+        background-color: transparent;
+
+        @include pc-layout {
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+    &_body {
+        padding: 0;
+        background-color: $white;
+        @include pc-layout {
+            width: 828px;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+}

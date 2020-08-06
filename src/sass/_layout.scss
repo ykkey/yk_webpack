@@ -136,6 +136,17 @@
             display: none;
         }
     }
+
+    &__btnModal {
+        cursor: pointer;
+        text-decoration: underline;
+        color: $white;
+        font-weight: bold;
+        font-size: 18px;
+        &Wrp {
+            text-align: center;
+        }
+    }
 }
 
 .footerWrapper {
