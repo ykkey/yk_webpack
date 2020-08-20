@@ -2,26 +2,44 @@
 
 const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
-const portfinder = require('portfinder'); // port
+// const portfinder = require('portfinder'); // port
 const readConfig = require('read-config')
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
-
+const routeDataMapper = require('webpack-route-data-mapper')
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 // base config
 const SRC = './src';
-const ROOT = '/';
-const DEST = '../kinto-jp.com-frontend/html/lp/yariscross/';
+const DEST = '../kinto-jp.com-frontend/html/';
 
 // const HOST = process.env.HOST || '0.0.0.0'
 // const PORT = process.env.PORT || 3000
 const meta = readConfig(`${SRC}/pug/meta.yml`);
-const BASE_DIR = meta.base_dir;
+const BASE_DIR = '/';
+const constants = {BASE_DIR: '/', IMG_DIR: '/img'};
+
+
+// page/**/*.pug -> dist/**/*.html
+const htmlTemplates = routeDataMapper({
+  baseDir: `${SRC}/pug/page`,
+  src: '**/[!_]*.pug',
+  options: {
+    inject: false,// script 挿入 false
+    minify: false
+  },
+  locals: Object.assign(
+      {},
+      constants,
+      {
+          meta: readConfig(`${SRC}/pug/meta.yml`),
+      }
+  )
+})
 
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
@@ -93,13 +111,13 @@ module.exports = {
           }
         ]
       },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/,	
-        loader: 'file-loader',	
-        options: {	
-          name: '/lp/yariscross/assets/[path][name].[ext]'	
-        }	
-      },
+      // {
+      //   test: /\.(jpe?g|png|gif|svg)$/,	
+      //   loader: 'file-loader',	
+      //   options: {	
+      //     name: '/lp/yariscross/assets/[path][name].[ext]'	
+      //   }	
+      // },
       // {
       //   test: /\.(jpe?g|png|gif|ico|woff|woff2|eot|ttf|svg|woff|woff2|ttf)(\?[a-z0-9=.]+)?$/,
       //   use: [{
@@ -112,6 +130,8 @@ module.exports = {
   },
 
   plugins: [
+    // 複数のHTMLファイルを出力する
+    ...htmlTemplates,
     // new CleanWebpackPlugin(
     //   ['dist'],
     //   {
@@ -120,12 +140,13 @@ module.exports = {
     //   }
     // ),
     new webpack.ProgressPlugin(),
-    new HtmlWebpackPlugin({
-      template: `${SRC}/pug/index.pug`,
-      templateParameters: {
-        meta: meta
-      }
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: `${SRC}/pug/index.pug`,
+    //   templateParameters: {
+    //     meta: meta
+    //   }
+    // }),
+    // htmlに含める
     new MiniCssExtractPlugin({
       filename: `assets/css/yariscross.css`,
     }),
@@ -138,18 +159,17 @@ module.exports = {
         to: path.resolve(__dirname, `${DEST}/assets/fonts/`)
       },
     ]),
-    new ImageminPlugin({
-      test: /\.(jpe?g|png|gif|svg)$/i,
-      pngquant: {
-        quality: '95-100',
-      },
-    }),
+    // new ImageminPlugin({
+    //   test: /\.(jpe?g|png|gif|svg)$/i,
+    //   pngquant: {
+    //     quality: '95-100',
+    //   },
+    // }),
   ],
   devServer: {
     open: true, //ブラウザを自動で開く
     inline: true, // 自動読み込み
     // openPage: BASE_DIR+"index.html",//自動で指定したページを開く
-    contentBase: path.join(__dirname, `./${DEST}`), // HTML等コンテンツのルートディレクトリ
     contentBase: path.join(__dirname, `./../kinto-jp.com-frontend/html/`),// HTML等コンテンツのルートディレクトリ
     watchContentBase: true, //コンテンツの変更監視をする
     // port: 3000, // ポート番号
@@ -158,6 +178,3 @@ module.exports = {
   cache: true,
   performance: { hints: false }// limit
 };
-
-// portfinder.getPort(function (err, port) {
-// });
