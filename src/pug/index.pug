@@ -9,8 +9,8 @@ extends /temp/_base
 mixin membership
   .p-lpyaris__blockMemeber
     p.p-lpyaris__buttonWrp
-      a.p-lpyaris__button(href="/customer/membership") 無料会員登録で最新情報を受け取る
-    p.p-lpyaris__footnote 無料会員登録をするとヤリスクロス等の発売時期、価格等の最新情報を受け取れます。
+      a.p-lpyaris__button(href="/customer/membership") ヤリスクロスのお見積りはこちら
+    p.p-lpyaris__footnote 3年/5年/7年各プランで、ヤリスクロスの詳細な見積りをシミュレーションが可能です。
 
 block content-block
   //- ヤリスクロスティザーLP コンテンツ
@@ -30,8 +30,9 @@ block content-block
     // ヤリスクロスを手に入れよう！
     section.p-lpyaris__spec
       .p-lpyaris__inner
+        p ※掲載の月額利用料は、最安値グレード・パッケージ、追加オプション選択無し、7年契約、ボーナス月加算110,000円（税込）の場合
         h2.p-lpyaris__title KINTOでお得に<br>ヤリスクロスを手に入れよう！
-        p.p-lpyaris__specIntro 「買うよりお得、らしい」KINTOに2020年9月新型クロスオーバーSUV<br>「ヤリスクロス」が新登場。
+        p.p-lpyaris__specIntro 「買うよりお得、らしい」KINTOに新型クロスオーバーSUV<br>「ヤリスクロス」が新登場。
 
       .p-lpyaris__specBlock.p-lpyaris__specBlock--01.js-lpyarisFadeIn
         .p-lpyaris__specBlock__inner.p-lpyaris__inner
@@ -39,7 +40,7 @@ block content-block
             h3.p-lpyaris__specBlock__hdg
               span.p-lpyaris__specBlock__hdgNo 01
               |力強い<br>プロポーション
-            p.p-lpyaris__specBlock__txt 大きなタイヤでアウトドアテイストを出し<br>ながらも、美しく洗練されたデザイン！
+            p.p-lpyaris__specBlock__txt 18インチ（Gグレードは16インチ）の大径タイヤでアウトドアテイストを出しながらも洗練されたデザイン！
             p.p-lpyaris__specBtnWrp
               a.p-lpyaris__specButton(href="#comparison") 類似車種との比較はこちら
           .p-lpyaris__specBlock__img
@@ -50,7 +51,8 @@ block content-block
             h3.p-lpyaris__specBlock__hdg
               span.p-lpyaris__specBlock__hdgNo 02
               |たっぷり<br>積める
-            p.p-lpyaris__specBlock__txt コンパクトなのにたっぷり積める！<br>コンパクトSUVトップクラスの荷室容量
+            p.p-lpyaris__specBlock__txt コンパクトなのにたっぷり積める！<br>荷室容量は「390L（デッキボード下含む）」とコンパクトSUVトップクラス
+
             p.p-lpyaris__specBtnWrp
               a.p-lpyaris__specButton(href="#comparison") 類似車種との比較はこちら
 
@@ -63,12 +65,18 @@ block content-block
           .p-lpyaris__specBlock__content
             h3.p-lpyaris__specBlock__hdg
               span.p-lpyaris__specBlock__hdgNo 03
-              |選べる2つの<br>エンジン
+              |コンパクトSUVトップクラスの低燃費
             p.p-lpyaris__specBlock__txt
-              |コンパクトSUVの中でもトップクラスの<br>低燃費を実現した<br>
-              |・1.5L　ハイブリッドエンジン<br>
-              |快適な走りと低燃費の両方を叶える<br>
-              |・1.5L　ガソリンエンジン
+              |コンパクトSUVの中でもトップクラスの低燃費性能を実現した「1.5L ハイブリッドエンジン」<br>
+              |30.2km/L ※WLTCモード 燃費消費率(国土交通省審査値)*<br>
+              |快適な走りと低燃費の両方を叶える「1.5L ガソリンエンジン」<br>
+              |19.8km/L ※WLTCモード 燃費消費率(国土交通省審査値)*<br>
+              |*KINTO取扱いグレードにおける最高値となります。<br>
+              |*燃料消費率は定められた試験条件のもとでの値です。お客様の使用環境（気象、渋滞等）や運転方法（急発進、エアコン使用等）に応じて燃料消費率は異なります。<br>
+              |*:WLTCモードは、市街地、郊外、高速道路の各走行モードを平均的な使用時間配分で構成した国際的な走行モードです。市街地モードは、信号や渋滞等の影響を受ける比較的低速な走行を想定し、郊外モードは、信号や渋滞等の影響をあまり受けない走行を想定、高速道路モードは、高速道路等での走行を想定しています。
+
+
+
             p.p-lpyaris__specBtnWrp
               a.p-lpyaris__specButton(href="#comparison") 類似車種との比較はこちら
           .p-lpyaris__specBlock__img
@@ -252,8 +260,8 @@ block content-block
             img(src="./assets/img/com/img_com_size.png", srcset="./assets/img/com/img_com_size.png 1x, ./assets/img/com/img_com_size@2x.png 2x" width="" , height="", alt="荷室の広さを比較")
           p.p-lpyaris__com__txt ヤリスクロスはコンパクトSUVの中ではトップクラスの荷室容量なので荷物をたくさん積んでのお出かけにも最適です！
         
-        //- .p-lpyaris__video.
-        //-   <iframe width="560" height="315" src="https://www.youtube.com/embed/rTVF_ls1-2w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        .p-lpyaris__video.
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/wH368jmmpLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         
         p.p-lpyaris__banner
           a.p-lpyaris__bannerLink(href="https://kinto-jp.com/contents/column/20200729-1.html")
