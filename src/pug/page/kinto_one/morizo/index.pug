@@ -1,10 +1,117 @@
 extends ./../../../temp/_base
+prepend config-block
+ - page_name = "モリゾウ"
+ - meta.description = ""
+ - meta.keywords = ""
+ - meta.url = "https://kinto-jp.com/kinto_one/morizo/"
+ - meta.ogp_image_url = "https://kinto-jp.com/assets/img/pic_ogimage_002.jpg"
+//-  - meta.ogp_image_url = "tset"
 
-//- append stylesheet-block
+append stylesheet-block
+  link(rel="stylesheet", href="/assets/style/contents/kinto_one/morizo/style.css")
 
-//- append javascript-block
+append javascript-block
+  script(src="/assets/javascripts/contents/kinto_one/morizo/app.js")
 
+block sitemap-json
+  script(type='application/ld+json').
+      {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://kinto-jp.com/",
+            "name": "ホーム"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@id": "https://kinto-jp.com/kinto_one/",
+              "name": "KINTO ONEとは"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@id": "https://kinto-jp.com/kinto_one/morizo/",
+              "name": "モリゾウ"
+            }
+          }
+        ]
+      }
 
 //- メンバーシップの登録部分
 block content-block
-  p test できた！
+  .p-lpmorizo.m-conent__full
+    //- キービジュアル
+    section.p-lpmorizo_keyvisual
+    //- 豊田社長文言
+    section.p-lpmorizo_message
+      .p-lpmorizo_message__image
+        //- TODO: 背景飛ばす
+        img(src="", alt="", srcset="")
+      .p-lpmorizo_message__content
+        h2 トヨタのスポーツカーを取り戻したい。
+        p テキストテキストテキストテキストテキストテキスト
+        .p-lpmorizo_message__signature
+          p トヨタ自動車株式会社代表取締役社長<br>マスタードライバー
+          p.p-lpmorizo_message__signature_name 豊田 章男
+          //- TODO: サイン荒いので書き直す？？
+          p.p-lpmorizo_message__signature_sign 豊田 章男
+    //- メンバー登録への案内
+    section.p-lpmorizo_guide
+      p KINTOは、GR YARISの新しい楽しみをご提供を予定しています。
+      p
+        a.p-lpmorizo_link(href="#")
+          span.p-lpmorizo_link__text 無料メンバー登録で最新情報を受け取る
+      p 無料メンバー登録をするとGR YARISのKINTO取扱いに伴うニュース、<br>価格等の最新情報、その他お得なキャンペーン情報が受け取れます。
+    //- キャンペーン概要
+    section.p-lpmorizo_campaign
+      .p-lpmorizo_inner.p-lpmorizo_campaign__inner
+        .p-lpmorizo_campaign__content
+          h2.p-lpmorizo_campaign__heading キャンペーン
+          p.p-lpmorizo_campaign__strong 最大4泊5日無料貸し出しキャンペーン
+          p.p-lpmorizo_campaign__text テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          p.p-lpmorizo_campaign__text テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          p.p-lpmorizo_campaign__text テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        .p-lpmorizo_campaign__side
+          .p-lpmorizo_campaign__side_image
+          .p-lpmorizo_campaign__side_footnote
+            h3.p-lpmorizo_campaign__side_footnote_heading ご応募にあたりご注意ください
+            .p-lpmorizo_campaign__side_footnote_text
+              p ・ご応募いただける方は、18歳以上の普通免許をお持ちの方に限ります。未成年の場合は、保護者の同意を得たうえでご応募ください。 ・●●および●●の貸出車両はマニュアル車になります。オートマ限定免許では運転できませんのでご注意ください。 ・保険は含まれておりません。貸出期間中の保険はお客様ご自身でお申込みください。 ・ガソリンは満タンにしてご返却ください。
+        .p-lpmorizo_campaign__links
+          a.p-lpmorizo_link.p-lpmorizo_link--strong(href="/customer/membership")
+            span.p-lpmorizo_link__text キャンペーンについて詳しくはこちら
+          a.p-lpmorizo_link(href="https://faq.kinto-jp.com/" target="_blank")
+            span.p-lpmorizo_link__text よくあるご質問はこちら
+    //- KINTOの特徴
+    section.p-lpmorizo_feature
+      .p-lpmorizo_inner.p-lpmorizo_feature__inner
+        h2 KINTOの特徴
+        .p-lpmorizo_feature__image
+          .p-lpmorizo_feature__image_item
+            p スマホ・PCから<br>カンタンお申込み
+          .p-lpmorizo_feature__image_item
+            p 頭金0、任意保険料も<br>コミコミ月々定額
+        .p-lpmorizo_feature__content
+          p KINTOは、頭金なし・任意保険料・メンテナンス費・税金などコミコミの月々定額サービスです。スマホ・PCでカンタンにお申込み・ご契約でき、お客様のカーライフに夢と誇りを提供します。
+        //- TODO: モデリスタのモジュールをとってくる
+        .p-lpmorizo_feature__links
+          h2.lp_modellistal_links_heading KINTOについて</h2>
+          ul.lp_modellistal_linkslist
+            li.lp_modellistal_linksitem: a(href="/kinto_one/") <span>商品概要</span>
+            li.lp_modellistal_linksitem: a(href="/kinto_one/merit/") <span>メリット</span>
+            li.lp_modellistal_linksitem: a(href="/kinto_one/contract/") <span>ご利用手順</span>
+          </ul>
+        </section>
+    //- バナー 後から表示される
+    //- TODO: トップのスライドと同じもの予定
+    section.p-lpmorizo_banner
+      .atari(style="height: 100px; background-color: gray")
