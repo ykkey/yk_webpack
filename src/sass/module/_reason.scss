@@ -89,16 +89,25 @@
     }
     &__itemtxt {
         @include fontBold;
-        text-align: left;
+        text-align: center;
         @include pc-layout {
             font-size: $fontL + px;
         }
     }
+    &__footnote {
+        @include fontsize(12,"sp");
+        @include setValue(margin-top, 20, "sp");
+        @include setValue(margin-bottom, 20, "sp");
+
+        @include pc-layout {
+            font-size: 12px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+    }
     &__txt {
-        @include setValue(margin-top, 25);
         @include pc-layout {
             font-size: $fontM + px;
-            margin-top: 100px;
         }
     }
 }
