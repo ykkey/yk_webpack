@@ -1,4 +1,4 @@
-// import "../sass/style.scss";
+import "../sass/style.scss";
 
 import imageLoad from './modules/imageLoad';
 import scrollFadeIn from './modules/scrollfadein.js';

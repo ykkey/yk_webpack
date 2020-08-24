@@ -22,7 +22,7 @@ const DEST = '../kinto-jp.com-frontend/html/';
 const meta = readConfig(`${SRC}/pug/meta.yml`);
 const BASE_DIR = '/';
 const constants = {BASE_DIR: '/', IMG_DIR: '/img'};
-
+const DIR_YARIS = 'lp/yariscross/';
 
 // page/**/*.pug -> dist/**/*.html
 const htmlTemplates = routeDataMapper({
@@ -44,7 +44,7 @@ const htmlTemplates = routeDataMapper({
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   entry: {
-    'assets/js/yariscross.js': `${SRC}/js/script.js`,
+    'lp/yariscrossassets/js/yariscross.js': `${SRC}/js/script.js`,
   },
   output: {
     path: path.resolve(__dirname, DEST),
@@ -148,23 +148,23 @@ module.exports = {
     // }),
     // htmlに含める
     new MiniCssExtractPlugin({
-      filename: `assets/css/yariscross.css`,
+      filename: `${DIR_YARIS}assets/css/yariscross.css`,
     }),
     new CopyWebpackPlugin([{
         from: path.resolve(__dirname, 'src/img/'),
-        to: path.resolve(__dirname,`${DEST}/assets/img/`)
+        to: path.resolve(__dirname,`${DEST}/${DIR_YARIS}assets/img/`)
       },
       {
         from: path.resolve(__dirname, 'src/fonts/'),
-        to: path.resolve(__dirname, `${DEST}/assets/fonts/`)
+        to: path.resolve(__dirname, `${DEST}/${DIR_YARIS}assets/fonts/`)
       },
     ]),
-    // new ImageminPlugin({
-    //   test: /\.(jpe?g|png|gif|svg)$/i,
-    //   pngquant: {
-    //     quality: '95-100',
-    //   },
-    // }),
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      pngquant: {
+        quality: '95-100',
+      },
+    }),
   ],
   devServer: {
     open: true, //ブラウザを自動で開く

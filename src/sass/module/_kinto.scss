@@ -1,9 +1,33 @@
+.p-lpyaris__titlefootnote {
+    @include setValue(font-size, 11, "sp");
+    @include setValue(margin-bottom, 40, "sp");
+    @include pc-layout{
+        font-size: 14px;
+        margin-bottom: 80px;
+    }
+}
 .p-lpyaris__kinto {
-    background-color: $bgcolor;
+    background-color: $black;
     position: relative;
     @include setValue(padding-top, 90);
     @include pc-layout {
-        padding-top: 260px;
+        padding-top: 20px;
+    }
+    &:before {
+        display: none!important;
+        padding-top: 0;
+    }
+    &:after {
+        background-color: $black!important;
+    }
+
+    // title
+    &InnerFirst {
+
+        @include setValue(margin-bottom, 96);
+        @include pc-layout {
+            margin-bottom: 110px;
+        }
     }
     &Block {
         border: 8px solid $white;

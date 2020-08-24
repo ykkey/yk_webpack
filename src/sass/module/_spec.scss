@@ -1,11 +1,18 @@
 .p-lpyaris__spec {
     // モーダル用のボタン
     // 普通のリンクに変更
-    background-color: $black;
-    @include setValue(padding-top, 30, "sp");
+    background-color: $bgcolor;
+    // @include setValue(padding-top, 30, "sp");
     @include pc-layout {
-        padding-top: 50px;
+        // padding-top: 50px;
         overflow: hidden;
+    }
+
+    &InnerTitle {
+        @include setValue(padding-top, 80, "sp");
+        @include pc-layout {
+            padding-top: 240px;
+        }
     }
 
     &BtnWrp {
@@ -41,7 +48,7 @@
             .p-lpyaris__specBlock__img {
                 @include pc-layout {
                     width: 700px;
-                    left: -21%;
+                    left: -24%;
                 }
             }
             .p-lpyaris__specBlock__content {
@@ -82,6 +89,8 @@
             }
             .p-lpyaris__specBlock__img {
                 left: -9%;
+                max-width: 80%;
+                margin: 0 auto;
                 @include pc-layout {
                     width: 532px;
                 }
@@ -108,7 +117,41 @@
             transform: translate(0, -50%);
         }
     }
+    &Block__imgFootnote {
+        @include fontsize(12,"sp");
+        @include setValue(margin-bottom, 30,"sp");
 
+        @include pc-layout {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    }
+    &Block__txt {
+        margin-bottom: 2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &Block__txtFootnote {
+        @include fontsize(10,"sp");
+        @include pc-layout {
+            font-size: 10px;
+        }
+    }
+    &Block__txtNote {
+        @include setValue(margin-bottom, 30,"sp");
+        @include pc-layout {
+            margin-bottom: 30px;
+        }
+        li {
+            @include fontsize(12,"sp");
+            text-indent: -1rem;
+            padding-left: 1rem;
+            @include pc-layout {
+                font-size: 12px;
+            }
+        }
+    }
     &Block__hdg {
         position: relative;
         @include fontBold;

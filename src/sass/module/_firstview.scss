@@ -57,7 +57,7 @@
     background-color: rgba(0, 0, 0, .65);
     border: getvw(15, "sp") solid rgba($yellow, .65);
     position: relative;
-    height: (286 / $sp_fix_width * 100vw);
+    height: (315 / $sp_fix_width * 100vw);
     opacity: 0;
     @include pc-layout {
         border: 15px solid rgba($yellow, .65);
@@ -136,7 +136,7 @@
         // TODO: パーセント計算
         @include setWidth(305,"sp");
         @include setValue(left, 10, "sp");
-        @include setValue(top, 38, "sp");
+        @include setValue(top, 15, "sp");
         @include pc-layout {
             width: 823px;
             top: 5%;
@@ -154,7 +154,7 @@
             // width: (1244px / 2);
             width: 680px;
             right: -1%;
-            bottom: -53.5%;
+            bottom: -55.5%;
         }
         img {
             position: relative;
@@ -182,25 +182,28 @@
         background-size: contain;
         // TODO 計算
         position: absolute;
-        @include setValue(top, 130, "sp");
-        @include setValue(left, -10, "sp");
-        @include setValue(height, 87, "sp");
+        @include setValue(top, 140, "sp");
+        @include setValue(left, -20, "sp");
+        @include setValue(height, 100, "sp");
         @include setWidth(351, "sp");
         @include pc-layout {
-            width: (1275px / 2);
-            height: (315px / 2);
+            width: (1303px / 2);
+            height: (366px / 2);
             left: -8%;
             top: 50%;
         }
         img {
             display: block;
-            width: (819 / 1275 * 100%);
+            width: (598 / 1275 * 100%);
             height: auto;
             -webkit-backface-visibility: hidden;
             position: absolute;
-            top: 48%;
-            left: 51%;
+            top: 53%;
+            left: 52%;
             transform: translate(-50%,-50%);
+            @include pc-layout {
+                left: 45%;
+            }
         }
     }
 
