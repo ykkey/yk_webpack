@@ -118,13 +118,13 @@ module.exports = {
           name: '/[path][name].[ext]'	
         }	
       },
-      {
-        test: /\.(jpe?g|png|gif|ico|woff|woff2|eot|ttf|svg|woff|woff2|ttf|css|js)(\?[a-z0-9=.]+)?$/,
-        use: [{
-          // loader: 'url-loader?limit=100000&name=img/[name].[ext]',	
-          loader: 'url-loader?limit=100000&name=img/[name].[ext]',
-        }, ],
-      }
+      // {
+      //   test: /\.(jpe?g|png|gif|ico|woff|woff2|eot|ttf|svg|woff|woff2|ttf)(\?[a-z0-9=.]+)?$/,
+      //   use: [{
+      //     // loader: 'url-loader?limit=100000&name=img/[name].[ext]',	
+      //     loader: 'url-loader?limit=100000&name=img/[name].[ext]',
+      //   }, ],
+      // }
 
     ],
   },
