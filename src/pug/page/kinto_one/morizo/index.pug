@@ -51,54 +51,92 @@ block content-block
   .p-lpmorizo.m-conent__full
     //- キービジュアル
     section.p-lpmorizo_keyvisual
+      p
+        a.p-lpmorizo_link(href="#")
+          span.p-lpmorizo_link__text ご応募はこちら（無料メンバー登録）
     //- 豊田社長文言
     section.p-lpmorizo_message
       .p-lpmorizo_message__image
-        //- TODO: 背景飛ばす
-        img(src="", alt="", srcset="")
       .p-lpmorizo_message__content
-        h2 トヨタのスポーツカーを取り戻したい。
-        p テキストテキストテキストテキストテキストテキスト
+        p: img(src="./assets/img/logo_yaris.png", srcset="./assets/img/logo_yaris.png 1x, ./assets/img/logo_yaris@2x.png 2x", width="241" , height="40", alt="ヤリスクロス")
+        h2.p-lpmorizo_message__title トヨタのスポーツカーを取り戻したい。
+        p
+          |ずっとそう思い続けてきました。<br>
+          |86はラリーでもサーキットでも私の大事な相棒です。<br>
+          |スープラもその名にふさわしいクルマとして復活させることができました。<br>
+          |ですがやはりトヨタが自らの手でつくるスポーツカーが欲しい。<br>
+          |その想いがずっと、私の心にはありました。<br>
+          |WRCへの参戦も、そこで得た技術や技能を織り込んだ<br>
+          |トヨタのスポーツカーを作りたいと思っていたからです。<br>
+          |このGR-FOURは世界で勝つためにトヨタが一から作ってきたスポーツカーです。<br>
+          |その一からも今まではトヨタは一般のお客様が使うクルマを作り<br>
+          |そのクルマの中でレースに使えるように改造してまいりました。<br>
+          |今度は違います。レースに勝つために、そこで出すクルマのために<br>
+          |普段のお客様に乗っていただくクルマはどうあるべきか<br>
+          |まったく逆転の発想で作り出したクルマが、<br>
+          |このGR YARISです。
         .p-lpmorizo_message__signature
           p トヨタ自動車株式会社代表取締役社長<br>マスタードライバー
           p.p-lpmorizo_message__signature_name 豊田 章男
           //- TODO: サイン荒いので書き直す？？
-          p.p-lpmorizo_message__signature_sign 豊田 章男
+          p.p-lpmorizo_message__signature_sign
+            img(src="./assets/img/sine_name.png", srcset="./assets/img/sine_name.png 1x, ./assets/img/sine_name@2x.png 2x", alt="豊田 章男")
+
     //- メンバー登録への案内
     section.p-lpmorizo_guide
-      p KINTOは、GR YARISの新しい楽しみをご提供を予定しています。
-      p
-        a.p-lpmorizo_link(href="#")
-          span.p-lpmorizo_link__text 無料メンバー登録で最新情報を受け取る
-      p 無料メンバー登録をするとGR YARISのKINTO取扱いに伴うニュース、<br>価格等の最新情報、その他お得なキャンペーン情報が受け取れます。
+      .p-lpmorizo_inner
+        p KINTOは、GR YARISの新しい楽しみをご提供を予定しています。
+        p
+          a.p-lpmorizo_link(href="#")
+            span.p-lpmorizo_link__text 無料メンバー登録で<br class="u-s-br--show--sp">最新情報を受け取る
+        p 無料メンバー登録をするとGR YARISのKINTO取扱いに伴うニュース、<br>価格等の最新情報、その他お得なキャンペーン情報が受け取れます。
     //- キャンペーン概要
     section.p-lpmorizo_campaign
       .p-lpmorizo_inner.p-lpmorizo_campaign__inner
         .p-lpmorizo_campaign__content
-          h2.p-lpmorizo_campaign__heading キャンペーン
-          p.p-lpmorizo_campaign__strong 最大4泊5日無料貸し出しキャンペーン
-          p.p-lpmorizo_campaign__text テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-          p.p-lpmorizo_campaign__text テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-          p.p-lpmorizo_campaign__text テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          h2.p-lpmorizo_campaign__heading
+            img(src="./assets/img/hd_campaign.png", srcset="./assets/img/hd_campaign.png 1x, ./assets/img/hd_campaign@2x.png 2x", alt="キャンペーン")
+          p.p-lpmorizo_campaign__strong 最大4泊5日<br class="u-s-br--show--sp">無料貸し出しキャンペーン
+          p.p-lpmorizo_campaign__text KINTO専用車の登場を記念して、発売直後のGR YARISにいち早く乗れるキャンペーンを開催中！<br>KINTOにメンバーシップ登録の上、アンケートにご回答いただくと、抽選で●名様に最大4泊5日まで無料で貸し出します
+          p.p-lpmorizo_campaign__text
+            |応募期間：<br>
+            |　①2020年9月4日(金) ～ 10月25日(日)<br>
+            |　②2020年10月27日(火) ～ 12月20日(日)<br>
+            |　③2021年1月5日(火) ～ 2月21日(日)
+          p.p-lpmorizo_campaign__text
+            |貸出期間：<br>
+            |　①2020年11月14日(土) ～ 12月23日 (水)<br class="u-s-br--show--sp">　※RS1台<br>
+            |　②2021年1月9日(土) ～ 2月24日(水)<br class="u-s-br--show--sp">　※RS、RZ　各1台<br>
+            |　③2021年3月6日(土) ～ 4月28日(水)<br class="u-s-br--show--sp">　※RZ1台
         .p-lpmorizo_campaign__side
           .p-lpmorizo_campaign__side_image
+            img(src="./assets/img/img_campaign.jpg", srcset="./assets/img/img_campaign.jpg 1x, ./assets/img/img_campaign@2x.jpg 2x", alt="")
+
           .p-lpmorizo_campaign__side_footnote
             h3.p-lpmorizo_campaign__side_footnote_heading ご応募にあたりご注意ください
             .p-lpmorizo_campaign__side_footnote_text
-              p ・ご応募いただける方は、18歳以上の普通免許をお持ちの方に限ります。未成年の場合は、保護者の同意を得たうえでご応募ください。 ・●●および●●の貸出車両はマニュアル車になります。オートマ限定免許では運転できませんのでご注意ください。 ・保険は含まれておりません。貸出期間中の保険はお客様ご自身でお申込みください。 ・ガソリンは満タンにしてご返却ください。
+              p
+                |・ご応募いただける方は、18歳以上の普通免許をお持ちの方に限ります。未成年の場合は、保護者の同意を得たうえでご応募ください。<br>
+                |・●●および●●の貸出車両はマニュアル車になります。オートマ限定免許では運転できませんのでご注意ください。<br>
+                |・保険は含まれておりません。貸出期間中の保険はお客様ご自身でお申込みください。<br>
+                |・ガソリンは満タンにしてご返却ください。
         .p-lpmorizo_campaign__links
           a.p-lpmorizo_link.p-lpmorizo_link--strong(href="/customer/membership")
-            span.p-lpmorizo_link__text キャンペーンについて詳しくはこちら
+            span.p-lpmorizo_link__text ご応募はこちら（無料メンバー登録）
           a.p-lpmorizo_link(href="https://faq.kinto-jp.com/" target="_blank")
             span.p-lpmorizo_link__text よくあるご質問はこちら
     //- KINTOの特徴
     section.p-lpmorizo_feature
       .p-lpmorizo_inner.p-lpmorizo_feature__inner
-        h2 KINTOの特徴
+        h2.p-lpmorizo_feature__title
+          img(src="./assets/img/logo_kinto.svg" alt="KINTO")
+          |の特徴
         .p-lpmorizo_feature__image
           .p-lpmorizo_feature__image_item
+            p: img(src="./assets/img/img_kinto01.png", srcset="./assets/img/img_kinto01.png 1x, ./assets/img/img_kinto01@2x.png 2x", width="335" , height="200", alt="kintoの特徴")
             p スマホ・PCから<br>カンタンお申込み
           .p-lpmorizo_feature__image_item
+            p: img(src="./assets/img/img_kinto02.png", srcset="./assets/img/img_kinto02.png 1x, ./assets/img/img_kinto02@2x.png 2x", width="335" , height="200", alt="kintoの特徴")
             p 頭金0、任意保険料も<br>コミコミ月々定額
         .p-lpmorizo_feature__content
           p KINTOは、頭金なし・任意保険料・メンテナンス費・税金などコミコミの月々定額サービスです。スマホ・PCでカンタンにお申込み・ご契約でき、お客様のカーライフに夢と誇りを提供します。

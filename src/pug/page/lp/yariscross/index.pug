@@ -18,8 +18,8 @@ append javascript-block
 mixin membership
   .p-lpyaris__blockMemeber
     p.p-lpyaris__buttonWrp
-      a.p-lpyaris__button(href="/customer/membership") ヤリスクロスのお見積りはこちら
-    p.p-lpyaris__footnote 3年/5年/7年各プランで、ヤリスクロスの詳細な見積りをシミュレーションが可能です。
+      a.p-lpyaris__button(href="/customer/simulation/yariscross/step1") ヤリスクロスのお見積りはこちら
+    p.p-lpyaris__footnote 3年/5年/7年各プランで、ヤリスクロスの詳細な見積りシミュレーションが可能です。
 
 block content-block
   //- ヤリスクロスティザーLP コンテンツ
@@ -46,7 +46,7 @@ block content-block
       .p-lpyaris__inner
         h2.p-lpyaris__title
           |KINTOの特徴
-          span.p-lpyaris__titleGuide Feature
+          span.p-lpyaris__titleGuide About KINTO
         .p-lpyaris__kintoBlock
           p.p-lpyaris__kintoBlock__img
             img(src="./assets/img/kinto/img_kinto01.png", width="320" , height="110", alt="頭金0円、コミコミ定額")
@@ -77,7 +77,7 @@ block content-block
         .p-lpyaris__inner
           h2.p-lpyaris__title
             |ヤリスクロスの特徴
-            span.p-lpyaris__titleGuide About KINTO
+            span.p-lpyaris__titleGuide Feature
       .p-lpyaris__specBlock.p-lpyaris__specBlock--01.js-lpyarisFadeIn
         .p-lpyaris__specBlock__inner.p-lpyaris__inner
           .p-lpyaris__specBlock__content
@@ -119,22 +119,18 @@ block content-block
             ul.p-lpyaris__specBlock__txtNote
               li *KINTO取扱いグレードにおける最高値となります。<br>
               li *燃料消費率は定められた試験条件のもとでの値です。お客様の使用環境（気象、渋滞等）や運転方法（急発進、エアコン使用等）に応じて燃料消費率は異なります。<br>
-              li *:WLTCモードは、市街地、郊外、高速道路の各走行モードを平均的な使用時間配分で構成した国際的な走行モードです。市街地モードは、信号や渋滞等の影響を受ける比較的低速な走行を想定し、郊外モードは、信号や渋滞等の影響をあまり受けない走行を想定、高速道路モードは、高速道路等での走行を想定しています。
+              li *WLTCモードは、市街地、郊外、高速道路の各走行モードを平均的な使用時間配分で構成した国際的な走行モードです。市街地モードは、信号や渋滞等の影響を受ける比較的低速な走行を想定し、郊外モードは、信号や渋滞等の影響をあまり受けない走行を想定、高速道路モードは、高速道路等での走行を想定しています。
 
             p.p-lpyaris__specBtnWrp
-              a.p-lpyaris__specButton(href="#comparison") グレード別比較表はこちら
+              a.p-lpyaris__specButton(href="#comparison") 類似車種との比較はこちら
           .p-lpyaris__specBlock__img
             img(src="./assets/img/spec/img_spec03.png", srcset="./assets/img/spec/img_spec03.png 1x, ./assets/img/spec/img_spec03@2x.png 2x", width="532" , height="377", alt="エンジン")
             p.p-lpyaris__specBlock__imgFootnote ※画像は 1.5L ダイナミックフォースエンジン<br>　（直列3気筒1.5L直噴エンジン）です。
 
       .p-lpyaris__inner
-        .p-lpyaris__btnModalWrp(data-module="modal")
-          button.p-lpyaris__btnModal.js-openModal(data-modal="toggle")
-            | 簡易諸元表はこちら
-          .m-modal__item.p-lpyaris__modal_item(data-modal="content")
-            .p-lpyaris__modal_body
-              figure.m-pic__normal
-                img(src="./assets/img/spec/img_table.png" alt="簡易諸元表")
+        .p-lpyaris__btnModalWrp
+          a.p-lpyaris__btnModal(href="" target="_blank")
+            | グレード別比較表はこちら
         //- メンバーシップ登録
         +membership
 
@@ -144,7 +140,7 @@ block content-block
         h2.p-lpyaris__title
           |お見積り例
           span.p-lpyaris__titleGuide Estimate
-        p 実際の見積り例をご紹介
+        p.p-lpyaris__estimateSubGuide 実際の見積り例をご紹介
         .p-lpyaris__estimateBlock
           .p-lpyaris__estimateImage.p-lpyaris__estimateBlockItem
             img(src="./assets/img/est/img_est.png", srcset="./assets/img/est/img_est.png 1x, ./assets/img/est/img_est@2x.png 2x", width="" , height="", alt="一般的な車のグラフ")

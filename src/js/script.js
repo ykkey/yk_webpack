@@ -1,5 +1,6 @@
 import "../sass/style.scss";
 
+console.log("test");
 import imageLoad from './modules/imageLoad';
 import scrollFadeIn from './modules/scrollfadein.js';
 const PATH_IMG = "/lp/yariscross/assets/img/";

@@ -4,7 +4,7 @@
     background-color: $bgcolor;
     // @include setValue(padding-top, 30, "sp");
     @include pc-layout {
-        // padding-top: 50px;
+        padding-top: 100px;
         overflow: hidden;
     }
 
@@ -43,7 +43,7 @@
         &--01 {
             @include setValue(padding-top, 87);
             @include pc-layout {
-                padding-top: ($borderHeight / 2);
+                padding-top: 100px;
             }
             .p-lpyaris__specBlock__img {
                 @include pc-layout {
@@ -148,7 +148,7 @@
             text-indent: -1rem;
             padding-left: 1rem;
             @include pc-layout {
-                font-size: 12px;
+                font-size: 10px;
             }
         }
     }

@@ -44,7 +44,7 @@ const htmlTemplates = routeDataMapper({
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   entry: {
-    'lp/yariscrossassets/js/yariscross.js': `${SRC}/js/script.js`,
+    'lp/yariscross/assets/js/yariscross.js': `${SRC}/js/script.js`,
   },
   output: {
     path: path.resolve(__dirname, DEST),
@@ -111,20 +111,20 @@ module.exports = {
           }
         ]
       },
-      // {
-      //   test: /\.(jpe?g|png|gif|svg)$/,	
-      //   loader: 'file-loader',	
-      //   options: {	
-      //     name: '/lp/yariscross/assets/[path][name].[ext]'	
-      //   }	
-      // },
-      // {
-      //   test: /\.(jpe?g|png|gif|ico|woff|woff2|eot|ttf|svg|woff|woff2|ttf)(\?[a-z0-9=.]+)?$/,
-      //   use: [{
-      //     // loader: 'url-loader?limit=100000&name=img/[name].[ext]',	
-      //     loader: 'url-loader?limit=100000&name=img/[name].[ext]',
-      //   }, ],
-      // }
+      {
+        test: /\.(jpe?g|png|gif|svg)$/,	
+        loader: 'file-loader',	
+        options: {	
+          name: '/[path][name].[ext]'	
+        }	
+      },
+      {
+        test: /\.(jpe?g|png|gif|ico|woff|woff2|eot|ttf|svg|woff|woff2|ttf|css|js)(\?[a-z0-9=.]+)?$/,
+        use: [{
+          // loader: 'url-loader?limit=100000&name=img/[name].[ext]',	
+          loader: 'url-loader?limit=100000&name=img/[name].[ext]',
+        }, ],
+      }
 
     ],
   },
@@ -152,7 +152,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([{
         from: path.resolve(__dirname, 'src/img/'),
-        to: path.resolve(__dirname,`${DEST}/${DIR_YARIS}assets/img/`)
+        to: path.resolve(__dirname,`${DEST}/`)
       },
       {
         from: path.resolve(__dirname, 'src/fonts/'),
