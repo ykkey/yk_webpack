@@ -1,4 +1,12 @@
 .p-lpyaris__banner {
+    &Wrp {
+        @include setValue(padding-top, 100, "sp");
+        @include setValue(padding-bottom, 50, "sp");
+        @include pc-layout {
+            padding-top: 300px;
+            padding-bottom: 150px;
+        }
+    }
     @include img100;
     img {
         margin: 0 auto;

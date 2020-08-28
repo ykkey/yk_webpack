@@ -50,7 +50,10 @@
     }
     &Price {
         text-align: center;
-        @include setValue(margin-top, 20);
+        img {
+            max-width: 100%;
+        }
+        @include setValue(margin-top, 36,"sp");
         @include pc-layout {
             margin-top: 40px;
         }
@@ -59,7 +62,13 @@
     &SubGuide {
         @include pc-layout {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 55px;
+            margin-top: -20px;
+        }
+    }
+    &Image {
+        img {
+            max-width: 100%;
         }
     }
 }

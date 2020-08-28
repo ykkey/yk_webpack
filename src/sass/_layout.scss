@@ -18,13 +18,16 @@
     a {
         @include font;
     }
+
     //link
     &__link {
         color: #fff;
+
         &:hover {
             color: #efefef;
         }
     }
+
     //- .l-cnt__main とほぼ同じ
     &__inner {
         margin: auto;
@@ -33,33 +36,38 @@
         padding: 0 getvw(20, "sp");
         position: relative;
         @include zindex(inner);
+
         @include pc-variable {
             width: $pc_innner_width / $pc_fix_width * 100%;
         }
+
         @include pc-layout {
             padding: 0;
             max-width: $pc_innner_width + px;
         }
     }
+
     &__footnote {
         @include fontsize(12, "sp");
-        text-indent: -1em;
-        padding-left: 1em;
+
         @include pc-layout {
             text-align: center;
             font-size: 15.4px;
         }
     }
+
     &__title {
         line-height: 1.5;
         @include setValue(margin-bottom, 30);
         @include fontsize(30, "sp");
         @include fontBold;
+
         @include pc-layout {
             font-size: 42px;
             text-align: center;
             margin-bottom: 50px;
         }
+
         &Guide {
             font-weight: normal;
             font-size: 30px;
@@ -67,6 +75,7 @@
             display: block;
             line-height: 1.7;
         }
+
         &Note {
             display: block;
             font-weight: normal;
@@ -86,11 +95,12 @@
         text-decoration: none;
         position: relative;
         cursor: pointer;
-        padding: getvw(15, "sp") 0 ;
+        padding: getvw(15, "sp") 0;
         @include setWidth(300, "sp");
-        @include fontsize(15,"sp");
+        @include fontsize(15, "sp");
         margin: getvw(45, "sp") auto getvw(10, "sp");
         @include fontBold;
+
         @include pc-layout {
             padding: 30px 0;
             font-size: 24px;
@@ -109,6 +119,7 @@
             transform: translate(0, -50%);
             background: image-url('btn/ico_arrow.svg') center center no-repeat;
             background-size: contain;
+
             @include pc-layout {
                 width: 10px;
                 height: 19px;
@@ -125,23 +136,46 @@
     // pc sp 表示管理
     &__show--pc {
         display: none;
+
         @include pc-layout {
             display: block;
         }
     }
+
     &__show--sp {
         display: block;
+
         @include pc-layout {
             display: none;
         }
     }
 
+    // link,に変更
     &__btnModal {
         cursor: pointer;
         text-decoration: underline;
         color: $white;
         font-weight: bold;
         font-size: 18px;
+        position: relative;
+        padding-right: 25px;
+
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+
+        &:after {
+            @include element;
+            height: 20px;
+            width: 20px;
+            background: image-url('btn/ic_pdf_001.svg') no-repeat center top;
+            background-position: 0 0;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
         &Wrp {
             text-align: center;
         }

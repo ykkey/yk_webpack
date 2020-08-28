@@ -4,14 +4,13 @@
     background-color: $bgcolor;
     // @include setValue(padding-top, 30, "sp");
     @include pc-layout {
-        padding-top: 100px;
         overflow: hidden;
     }
 
     &InnerTitle {
         @include setValue(padding-top, 80, "sp");
         @include pc-layout {
-            padding-top: 240px;
+            padding-top: 300px;
         }
     }
 
