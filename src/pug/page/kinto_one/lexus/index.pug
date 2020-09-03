@@ -1,0 +1,195 @@
+extends ./../../../temp/_base
+prepend config-block
+ - page_name = "KINTO for LEXUS｜【KINTO】クルマのサブスク、トヨタから"
+ - meta.description = "なるほど、レクサスに、この持ち方。KINTO for LEXUSのページです。KINTOでは好きなレクサス車1台を、3年間お楽しみいただけます。常に新車のレクサスを楽しめる持ち方。【愛車サブスクリプションサービス「KINTO（キント）」公式サイト】好きなクルマ、乗りたいクルマを自由に選び、3年間お楽しみいただけます。"
+ - meta.keywords = "toyota,トヨタ自動車,トヨタ,KINTO,キント,サブスクリプション,subscription,サブスク,KINTO ONE,レクサス,lexus,フルサービスリース,リース,借りる"
+ - meta.url = "https://kinto-jp.com/kinto_one/lexus/"
+ - meta.ogp_image_url = "https://kinto-jp.com/assets/img/pic_ogimage_002.jpg"
+//-  - meta.ogp_image_url = "test"
+
+append stylesheet-block
+  link(rel="stylesheet", href="/assets/style/contents/kinto_one/lexus/style.css")
+
+append javascript-block
+  script(src="/assets/javascripts/contents/kinto_one/lexus/app.js")
+
+block sitemap-json
+  script(type='application/ld+json').
+      {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://kinto-jp.com/",
+            "name": "ホーム"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@id": "https://kinto-jp.com/kinto_one/",
+              "name": "KINTO ONEとは"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@id": "https://kinto-jp.com/kinto_one/lexus/",
+              "name": "KINTO for LEXUS"
+            }
+          }
+        ]
+      }
+block breadcrumb-block
+  ul.m-bread__list
+    li
+      a(href='../../') ホーム
+    li
+      a(href='../') KINTO ONEとは
+    li
+      | KINTO for LEXU
+
+//- コンテンツ内容
+block content-block
+  .p-lplexus.m-conent__full
+    section.p-lplexus_mv
+      .l-cnt__main02
+        .p-lplexus_mv__inner
+          .p-lplexus_mv__img
+            img.u-show--sp(src="./img/img_main_sp@2x.jpg" alt="")
+            img.u-show--pc(src="./img/img_main.jpg", srcset="./img/img_main.jpg 1x, ./img/img_main@2x.jpg 2x", alt="")
+          h1.p-lplexus_mv__title
+            img.u-show--sp(src="./img/title_sp@2x.png" alt="KINTO ONE for LEXUS")
+            img.u-show--pc(src="./img/title.png", srcset="./img/title.png 1x, ./img/title@2x.png 2x", alt="KINTO ONE for LEXUS")
+        .p-lplexus_mv__content.p-lplexus_link__wrp
+          .p-lplexus_mv__block.p-lplexus_link__item
+            p.p-lplexus_mv__blockHdg 取扱い車種はこちら
+            p: a.m-btn__02(href="/kinto_one/lineup/lexus/") <span class="m-btn__text">車種ラインアップ</span>
+          .p-lplexus_mv__block.p-lplexus_link__item
+            p.p-lplexus_mv__blockHdg KINTOでレクサスを持った人の声
+            p: a.m-btn__02(href="/lp/kintovoice/") <span class="m-btn__text">KINTO VOICE</span>
+    section.p-lplexus_merit
+      h2.p-lplexus_merit__title KINTOでレクサスを<br class="u-s-br--show--sp">持つメリット
+      .p-lplexus_merit__inner
+        .p-lplexus_merit__block.l-cnt__main
+          h3.p-lplexus_merit__heading
+            span.p-lplexus_merit__headingNo 01
+            | “新車のレクサス”を楽しめる
+          .p-lplexus_merit__image
+            img(src="./img/img_merit01.png", srcset="./img/img_merit01.png 1x, ./img/img_merit01@2x.png 2x", alt="")
+          .p-lplexus_merit__content
+            h4.p-lplexus_merit__heading2 3年ごとに新車に乗り換え
+            p.p-lplexus_merit__text KINTOのレクサスは3年契約のサブスクリプション。<br>3年ごとに乗り換えることができるため、最新のレクサスを楽しめます。法人契約も可能です。
+
+        .p-lplexus_merit__block.l-cnt__main.p-lplexus_merit__block02
+          h3.p-lplexus_merit__heading
+            span.p-lplexus_merit__headingNo 02
+            | “新車のレクサス”を楽しめる
+          .p-lplexus_merit__image
+            img(src="./img/img_merit02.png", srcset="./img/img_merit02.png 1x, ./img/img_merit02@2x.png 2x", alt="")
+          .p-lplexus_merit__content
+            h4.p-lplexus_merit__heading2 頭金なし、あらゆる費用がコミコミ
+            p.p-lplexus_merit__text 月額利用料にはクルマだけでなく、下記のようなクルマに関わる費用も全て含まれています。頭金不要で月々の出費が一定になるため、支出管理がしやすく、急な支出も抑えることができます。
+            .p-lplexus__grayBlock
+              ul.p-lplexus_merit__list
+                li: a(href="/kinto_one/option/") 車両・オプション
+                li: a(href="/insurance/") 自動車保険
+                li: a(href="/kinto_one/maintenance/") メンテナンス・故障修理
+                li 税金・登録諸費用※
+            p.p-lplexus__footnote ※自賠責保険・自動車税種別割（期間分）・自動車税環境性能割・重量税・登録手続き費用が含まれます。
+
+        .p-lplexus_merit__block.l-cnt__main
+          h3.p-lplexus_merit__heading
+            span.p-lplexus_merit__headingNo 03
+            | “面倒な手続きが不要”
+          .p-lplexus_merit__image
+            img(src="./img/img_merit03.png", srcset="./img/img_merit03.png 1x, ./img/img_merit03@2x.png 2x", alt="")
+          .p-lplexus_merit__content
+            h4.p-lplexus_merit__heading2 契約はWEBで完結、時間や手間を削減
+            p.p-lplexus_merit__text WEBで契約をすることができるため、24時間いつでも自分の好きな時間・場所でクルマをご契約いただけます。
+            h4.p-lplexus_merit__heading2 税金・保険・クルマの処分などの手間なし
+            p.p-lplexus_merit__text 税金・保険・クルマの処分などの手間なしで、3年後はクルマを返却するだけです。
+
+    section.p-lplexus__suport.l-cnt__main
+      .p-lplexus__grayBlock.p-lplexus__grayBlock--content
+        .p-lplexus__grayBlock_img
+          img(src="./img/img_support.svg" alt="サポート")
+        .p-lplexus__grayBlock__content
+          h4.p-lplexus__grayBlock_heading レクサスオーナーだけの充実のサポート
+          p レクサスオーナー専用サービス「レクサスオーナーズデスク」をご利用いただけます。<br>ナビの目的地設定や予約・紹介サービス、トラブル対応まで、充実のサポートを受けることができます。
+      p.m-btn__wrp--center: a.m-btn__02(href="/kinto_one/lineup/lexus/") <span class="m-btn__text">今すぐクルマを見る</span>
+
+    // width 100%
+    section.p-lplexus_more
+      h3.p-lplexus_more__heading さらに詳しく知りたい方はこちら
+      .p-lplexus_link__wrp
+        p.p-lplexus_link__item: a.m-btn__02(href="/kinto_one/#detail") <span class="m-btn__text">商品内容詳細</span>
+        p.p-lplexus_link__item: a.m-btn__02(href="/kinto_one/contract/") <span class="m-btn__text">ご利用の流れ</span>
+
+    section.p-lplexus__forcorp.l-cnt__main
+      .p-lplexus__grayBlock.p-lplexus__grayBlock--content
+        .p-lplexus__grayBlock_img
+          img(src="./img/img_corp.svg" alt="法人")
+        .p-lplexus__grayBlock__content
+          h4.p-lplexus__grayBlock_heading 法人のお客様へ
+          p 月々定額でキャッシュフローが管理しやすく、<br>保険や税金などの経費処理の手間が削減できるため、社用車としてもおすすめです。
+        p.p-lplexus__grayBlock_link: a.m-btn__02(href="/kinto_one/corporation/#anchor2") <span class="m-btn__text">法人利用のメリットを見る</span>
+
+    section.p-lplexus_voice
+      .l-cnt__main
+        h2.p-lplexus_voice__title KINTO VOICE
+        p.p-lplexus_voice__banner: a(href="/lp/kintovoice/")
+          img(src="./img/bnr_voice.png", srcset="./img/bnr_voice.png 1x, ./img/bnr_voice@2x.png 2x", alt="")
+        p: a.m-btn__02(href="/lp/kintovoice/") <span class="m-btn__text"> KINTO VOICEを見る</span>
+
+    section.p-lplexus_flex.l-cnt__main
+      h2.p-lplexus_flex__title いろいろなレクサスを<br class="u-s-br--show--sp">楽しみたい方へ
+      p.m-txt__normal--center 3年間で半年または1年ごとにお乗り換えができる『KINTO FLEX』をご用意。
+      h3.p-lplexus_flex__logo
+        img(src="./img/logo_flex.svg" alt="KINTO FLEX")
+      .p-lplexus_flex__accordionWrp(data-module="accordion2")
+        .p-lplexus_flex__boxs
+          .p-lplexus_flex__box.p-lplexus__grayBlock
+            p.p-lplexus_flex__heading 3台 / 3年<span class="p-lplexus_flex__headingSmr">月額176,000円(税込)〜<span class="p-lplexus_flex__headingSmrFt">※</span></span>
+            p.p-lplexus_flex__text いろいろ乗りたい、だけどしっかり試したいから1年ごとに乗り換え
+          .p-lplexus_flex__box.p-lplexus__grayBlock
+            p.p-lplexus_flex__heading 6台 / 3年<span class="p-lplexus_flex__headingSmr">月額198,000円(税込)<span class="p-lplexus_flex__headingSmrFt">※</span></span>
+            p たくさんのクルマを楽しみたいから半年ごとに乗り換え
+        p.p-lplexus_flex__footnote ※月額利用料はお選びいただく車種で変わりません<br>※3台/3年プランは雪寒地パッケージをお選びいただけます
+        .p-lplexus_flex__block
+          .p-lplexus_flex__block_content
+            h4.p-lplexus_flex__heading2 プラン変更時の中途解約金が無料
+            p KINTO FLEX→KINTO ONE(レクサス車1台3年契約)へ変更時の中途解約金は無料です。またKINTO FLEXの3年3台プラン⇔3年6台プラン変更時も同様です。
+
+          .p-lplexus_flex__block_img
+            img(src="./img/img_flex.png", srcset="./img/img_flex.png 1x, ./img/img_flex@2x.png 2x", alt="")
+        p.m-btn__wrp--center: a.m-btn__02(href="/kinto_flex/plan/") <span class="m-btn__text">KINTO FLEXについて詳しく見る</span>
+        button.p-lplexus_flex__accordionTrigger(data-accordion="toggle")
+          span もっと見る
+
+    section.p-lplexus_useful
+      .l-cnt__main
+        h2.m-hdg__02.m-txt__normal--center お役立ち情報
+        ul.m-card02__wrp
+          li.m-card02__item
+            a.m-card02__link(href="https://magazine.kinto-jp.com/column/20200424-1.html" target="_blank")
+              .m-card02__img
+                img.m_pic(src="/inc/column/img/pic_tax_savings.jpg" alt="【個人事業主は必見】車の経費計上方法や節税効果を紹介！")
+              .m-card02__txt 【個人事業主は必見】車の経費計上方法や節税効果を紹介！
+          li.m-card02__item
+            a.m-card02__link(href="https://magazine.kinto-jp.com/column/20200623-1.html" target="_blank")
+              .m-card02__img
+                img.m_pic(src="/inc/column/img/pic_online.jpg" alt="車の買い方に新しい選択肢！ネットから申し込む方法も登場")
+              .m-card02__txt 車の買い方に新しい選択肢！ネットから申し込む方法も登場
+          li.m-card02__item
+            a.m-card02__link(href="https://magazine.kinto-jp.com/column/20200831-1.html" target="_blank")
+              .m-card02__img
+                img.m_pic(src="/inc/column/img/pic_car_cost_eye.jpg" alt="車の維持費は年間いくら？自動車税・自動車保険・車検費用など計算すべき項目解説！")
+              .m-card02__txt 車の維持費は年間いくら？自動車税・自動車保険・車検費用など計算すべき項目解説！
+
+        p.m-btn__wrp--center: a.m-btn__02(href="https://magazine.kinto-jp.com/" target="_blank") <span class="m-btn__text">お役立ち情報を見る</span>

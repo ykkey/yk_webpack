@@ -126,24 +126,23 @@ html(lang="ja")
       iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-ND8HQTX', height='0', width='0', style='display:none;visibility:hidden')
     // End Google Tag Manager (noscript)
     #glonav(data-src='/customer/header')
-    #pageContentsTop
+    main
       //- コンテンツ内容
       block content-block
-
-      //- フッターパンくず
-      .l_staticContent
-        .l_breadcrumb
-          ul.l_breadcrumb_inner
-            li.l_breadcrumb_item
+      
+    //- フッターパンくず
+    .l-cnt__full.l-cnt__full--gray
+      .l-cnt__main.m-bread__cnt
+        block breadcrumb-block
+          ul.m-bread__list
+            li
               a(href='../../') ホーム
-            li.l_breadcrumb_item
+            li
               | KINTOに新型クロスオーバーSUV「ヤリスクロス」が新登場
-          // /.l_breadcrumb
-        p.l_pagetop
-          a.l_pagetop_btn(href='#pagetop') PAGE TOP
-
-      #footerContainer(data-src='/customer/footer')
-      .l_overlay.js_overlay
+    p.m-pagetop_btn
+      a(href="#") PAGE TOP
+    #footerContainer(data-src="/customer/footer")
+    .l_overlay.js_overlay
 
     // javascript
     block javascript-block
