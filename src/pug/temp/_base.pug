@@ -61,57 +61,56 @@ html(lang="ja")
     link(rel="shortcut icon" href="/assets/img/ic_favicon_001.ico")
     link(rel="icon" sizes="16x16" href="/assets/img/ic_favicon_001_16.png")
     link(rel="icon" sizes="32x32" href="/assets/img/ic_favicon_001_32.png")
-
     link(rel="stylesheet" href="/assets/customer/css/base_layout.css")
     link(rel="stylesheet" href="/assets/style/style.css")
+    block stylesheet-block
+
     script(src="/customer/assets/js/jquery-3.4.1.min.js")
     script(src="/assets/js/writeGlonav.js")
     script(src="/assets/javascripts/app.js")
+    block javascript-block
 
-    // stylesheet
-    block stylesheet-block
-    //- link(rel="stylesheet", href="css/style.css")
+    // Google Tag Manager
+    script.
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js"
+        });
+        var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-ND8HQTX");
 
-  // Google Tag Manager
-  script.
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-      "gtm.start": new Date().getTime(),
-      event: "gtm.js"
-      });
-      var f = d.getElementsByTagName(s)[0],
-      j = d.createElement(s),
-      dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", "GTM-ND8HQTX");
-  // End Google Tag Manager
-  block sitemap-json
-    script(type='application/ld+json').
-        {
-        "@context": "http://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
+    // End Google Tag Manager
+    block sitemap-json
+      script(type='application/ld+json').
           {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@id": "https://kinto-jp.com/",
-              "name": "ホーム"
-              }
-            },
+          "@context": "http://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
             {
               "@type": "ListItem",
-              "position": 2,
+              "position": 1,
               "item": {
-                "@id": "https://kinto-jp.com/lp/yariscross/",
-                "name": "KINTOに新型クロスオーバーSUV「ヤリスクロス」が新登場！"
+                "@id": "https://kinto-jp.com/",
+                "name": "ホーム"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": "https://kinto-jp.com/lp/yariscross/",
+                  "name": "KINTOに新型クロスオーバーSUV「ヤリスクロス」が新登場！"
+                }
               }
-            }
-          ]
-        }
+            ]
+          }
 
   body
     // Loading script asynchronously
@@ -142,7 +141,4 @@ html(lang="ja")
     p.m-pagetop_btn
       a(href="#") PAGE TOP
     #footerContainer(data-src="/customer/footer")
-    .l_overlay.js_overlay
 
-    // javascript
-    block javascript-block
