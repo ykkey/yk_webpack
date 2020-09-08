@@ -11,6 +11,7 @@ append stylesheet-block
   link(rel="stylesheet", href="/assets/style/contents/kinto_one/lexus/style.css")
 
 append javascript-block
+  script(src="/inc/column/js/column.js")
   script(src="/assets/javascripts/contents/kinto_one/lexus/app.js")
 
 block sitemap-json
@@ -89,7 +90,7 @@ block content-block
         .p-lplexus_merit__block.l-cnt__main.p-lplexus_merit__block02
           h3.p-lplexus_merit__heading
             span.p-lplexus_merit__headingNo 02
-            | “新車のレクサス”を楽しめる
+            | “月々コミコミ定額”
           .p-lplexus_merit__image
             img(src="./img/img_merit02.png", srcset="./img/img_merit02.png 1x, ./img/img_merit02@2x.png 2x", alt="")
           .p-lplexus_merit__content
@@ -100,8 +101,8 @@ block content-block
                 li: a(href="/kinto_one/option/") 車両・オプション
                 li: a(href="/insurance/") 自動車保険
                 li: a(href="/kinto_one/maintenance/") メンテナンス・故障修理
-                li 税金・登録諸費用※
-            p.p-lplexus__footnote ※自賠責保険・自動車税種別割（期間分）・自動車税環境性能割・重量税・登録手続き費用が含まれます。
+                li 税金・登録諸費用<span class="p-lplexus_flex__headingSmrFt">※</span>
+            p.p-lplexus__footnote.m-txt__indent.m-txt__caption ※自賠責保険・自動車税種別割（期間分）・自動車税環境性能割・重量税・登録手続き費用が含まれます。
 
         .p-lplexus_merit__block.l-cnt__main
           h3.p-lplexus_merit__heading
@@ -144,8 +145,8 @@ block content-block
       .l-cnt__main
         h2.p-lplexus_voice__title KINTO VOICE
         p.p-lplexus_voice__banner: a(href="/lp/kintovoice/")
-          img(src="./img/bnr_voice.png", srcset="./img/bnr_voice.png 1x, ./img/bnr_voice@2x.png 2x", alt="")
-        p: a.m-btn__02(href="/lp/kintovoice/") <span class="m-btn__text"> KINTO VOICEを見る</span>
+          img.u-show--pc(src="./img/bnr_voice_pc.jpg", srcset="./img/bnr_voice_pc.jpg 1x, ./img/bnr_voice_pc@2x.jpg 2x", alt="")
+          img.u-show--sp(src="./img/bnr_voice_sp.jpg" alt="")
 
     section.p-lplexus_flex.l-cnt__main
       h2.p-lplexus_flex__title いろいろなレクサスを<br class="u-s-br--show--sp">楽しみたい方へ
@@ -155,12 +156,12 @@ block content-block
       .p-lplexus_flex__accordionWrp(data-module="accordion2")
         .p-lplexus_flex__boxs
           .p-lplexus_flex__box.p-lplexus__grayBlock
-            p.p-lplexus_flex__heading 3台 / 3年<span class="p-lplexus_flex__headingSmr">月額176,000円(税込)〜<span class="p-lplexus_flex__headingSmrFt">※</span></span>
+            p.p-lplexus_flex__heading 3台 / 3年<span class="p-lplexus_flex__headingSmr">月額<span class="p-lplexus_flex__headingPrice">176,000</span>円(税込)〜<span class="p-lplexus_flex__headingSmrFt">※</span></span>
             p.p-lplexus_flex__text いろいろ乗りたい、だけどしっかり試したいから1年ごとに乗り換え
           .p-lplexus_flex__box.p-lplexus__grayBlock
-            p.p-lplexus_flex__heading 6台 / 3年<span class="p-lplexus_flex__headingSmr">月額198,000円(税込)<span class="p-lplexus_flex__headingSmrFt">※</span></span>
+            p.p-lplexus_flex__heading 6台 / 3年<span class="p-lplexus_flex__headingSmr">月額<span class="p-lplexus_flex__headingPrice">198,000円</span>(税込)<span class="p-lplexus_flex__headingSmrFt">※</span></span>
             p たくさんのクルマを楽しみたいから半年ごとに乗り換え
-        p.p-lplexus_flex__footnote ※月額利用料はお選びいただく車種で変わりません<br>※3台/3年プランは雪寒地パッケージをお選びいただけます
+        p.p-lplexus_flex__footnote.m-txt__caption ※月額利用料はお選びいただく車種で変わりません<br>※3台/3年プランは雪寒地パッケージをお選びいただけます
         .p-lplexus_flex__block
           .p-lplexus_flex__block_content
             h4.p-lplexus_flex__heading2 プラン変更時の中途解約金が無料
@@ -175,21 +176,5 @@ block content-block
     section.p-lplexus_useful
       .l-cnt__main
         h2.m-hdg__02.m-txt__normal--center お役立ち情報
-        ul.m-card02__wrp
-          li.m-card02__item
-            a.m-card02__link(href="https://magazine.kinto-jp.com/column/20200424-1.html" target="_blank")
-              .m-card02__img
-                img.m_pic(src="/inc/column/img/pic_tax_savings.jpg" alt="【個人事業主は必見】車の経費計上方法や節税効果を紹介！")
-              .m-card02__txt 【個人事業主は必見】車の経費計上方法や節税効果を紹介！
-          li.m-card02__item
-            a.m-card02__link(href="https://magazine.kinto-jp.com/column/20200623-1.html" target="_blank")
-              .m-card02__img
-                img.m_pic(src="/inc/column/img/pic_online.jpg" alt="車の買い方に新しい選択肢！ネットから申し込む方法も登場")
-              .m-card02__txt 車の買い方に新しい選択肢！ネットから申し込む方法も登場
-          li.m-card02__item
-            a.m-card02__link(href="https://magazine.kinto-jp.com/column/20200831-1.html" target="_blank")
-              .m-card02__img
-                img.m_pic(src="/inc/column/img/pic_car_cost_eye.jpg" alt="車の維持費は年間いくら？自動車税・自動車保険・車検費用など計算すべき項目解説！")
-              .m-card02__txt 車の維持費は年間いくら？自動車税・自動車保険・車検費用など計算すべき項目解説！
-
+        #js-columns(data-incpath="/inc/column/kintoone_lexus.html")
         p.m-btn__wrp--center: a.m-btn__02(href="https://magazine.kinto-jp.com/" target="_blank") <span class="m-btn__text">お役立ち情報を見る</span>

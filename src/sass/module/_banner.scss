@@ -29,12 +29,12 @@
 // video
 .p-lpyaris__video {
     width: 100%;
-    padding-top: (36/64*100%);
+    padding-top: 45.75%;//(360/640*100%);
     position: relative;
-    @include setValue(margin-bottom, 24, "sp");
+    @include setValue(margin-top, 24, "sp");
     @include pc-layout {
         width: 800px;
-        margin: 0 auto 136px;
+        margin: 136px auto 0;
     }
 
     iframe {
