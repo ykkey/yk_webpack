@@ -8,7 +8,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
+// const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const routeDataMapper = require('webpack-route-data-mapper')
 
 const isDevelopment = process.env.NODE_ENV === 'development';
@@ -159,12 +159,12 @@ module.exports = {
         to: path.resolve(__dirname, `${DEST}/${DIR_YARIS}assets/fonts/`)
       },
     ]),
-    new ImageminPlugin({
-      test: /\.(jpe?g|png|gif|svg)$/i,
-      pngquant: {
-        quality: '95-100',
-      },
-    }),
+    // new ImageminPlugin({
+    //   test: /\.(jpe?g|png|gif|svg)$/i,
+    //   pngquant: {
+    //     quality: '95-100',
+    //   },
+    // }),
   ],
   devServer: {
     open: true, //ブラウザを自動で開く

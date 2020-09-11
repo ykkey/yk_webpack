@@ -1,0 +1,285 @@
+extends ./../../../temp/_base
+prepend config-block
+  - meta.description = ""
+  - meta.keywords = "toyota,トヨタ自動車,トヨタ,KINTO,キント,サブスクリプション,subscription,サブスク,KINTO ONE,レクサス,lexus,フルサービスリース,リース,借りる"
+  - meta.url = "https://kinto-jp.com//campaign/cp-kintocamp/"
+  - meta.ogp_image_url = "https://kinto-jp.com/assets/img/pic_ogimage_002.jpg"
+//-  - meta.ogp_image_url = "test"
+
+append config-block
+  - title = "KINTO CAMPE｜【KINTO】クルマのサブスク、トヨタから"
+
+append stylesheet-block
+  link(rel="stylesheet", href="/assets/style/contents/campaign/cp-kintocamp/style.css")
+
+append javascript-block
+  script(src="/assets/javascripts/contents/campaign/cp-kintocamp/app.js")
+
+block sitemap-json
+  script(type='application/ld+json').
+    {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://kinto-jp.com/",
+          "name": "ホーム"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://kinto-jp.com/campaign/",
+            "name": "キャンペーン"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://kinto-jp.com/campaign/cp-kintocamp/",
+            "name": "KINTO CAMPE"
+          }
+        }
+      ]
+    }
+block breadcrumb-block
+  ul.m-bread__list
+    li
+      a(href='../../') ホーム
+    li
+      a(href='../') キャンペーン
+    li
+      | KINTO CAMPE
+
+//- コンテンツ内容
+block content-block
+  // TODP: Hタグ見直す
+  .p-kintocamp.m-conent__full
+    section.p-kintocamp-mainVisual#top
+    // KINTO CAMPとは？
+    section.p-kintocamp-about
+      .p-kintocamp-about__inner
+        ul.p-kintocamp-about__anchorLink
+          li.p-kintocamp-about__anchorLink_item: a.p-kintocamp-about__anchorLink_link(href="#ability")
+            span KINTO CAMPアクティビティ
+          li.p-kintocamp-about__anchorLink_item: a.p-kintocamp-about__anchorLink_link(href="#invitation")
+            span 招待キャンペーン
+          li.p-kintocamp-about__anchorLink_item: a.p-kintocamp-about__anchorLink_link(href="#access")
+            span アクセス
+        .p-kintocamp-block.p-kintocamp-about__block
+          figure.p-kintocamp-about__image.p-kintocamp-block__image
+            img(src="./assets/img/img_about.jpg" srcset="./assets/img/img_about.jpg 1x, ./assets/img/img_about@2x.jpg 2x" alt="KINTO CAMP")
+          .p-kintocamp-about__content.p-kintocamp-block__content
+            h2.p-kintocamp-about__heding KINTO CAMPとは…？
+            p.p-kintocamp-about__text 初のKINTO主催キャンプイベント！抽選で30組60名様をご招待。
+            p.p-kintocamp-about__text 富士山のふもと・ふもとっぱらキャンプ場の一部を貸し切り、ご招待者限定キャンプを行います。
+            p.p-kintocamp-about__text 通常のキャンプ体験だけではなく、滞在中に楽しめるアクティビティをご用意！
+            p.p-kintocamp-about__text クルマを持っていない方も、キャンプがはじめての方も、KINTOと一緒に“ワンランク上のキャンプ”を体験をしてみませんか？
+          p.m-txt__caption ※小雨決行、荒天中止
+
+
+    section.p-kintocamp-ability#ability
+      .p-kintocamp__inner
+        h3.p-kintocamp-ability__title.p-kintocamp__title KINTO CAMP アクティビティ
+        .p-kintocamp-ability__block
+          .p-kintocamp-ability__item
+            .p-kintocamp-ability__itemImg
+              img(src="./assets/img/img_ability01.jpg" srcset="./assets/img/img_ability01.jpg 1x, ./assets/img/img_ability01@2x.jpg 2x")
+            p.p-kintocamp-ability__itemText テント組み立て講座や最強のキャンプ飯講座など、キャンプ初心者でも楽しめるアクティビティをご用意！キャンプのプロが滞在中のサポートをします。
+          .p-kintocamp-ability__item
+            .p-kintocamp-ability__itemImg
+              img(src="./assets/img/img_ability02.jpg" srcset="./assets/img/img_ability02.jpg 1x, ./assets/img/img_ability02@2x.jpg 2x")
+            p.p-kintocamp-ability__itemText ミニハイキング、スラックライン、焚火Barなど…自由時間に好きなアクティビティに参加して仲間と家族と楽しもう！
+
+    section.p-kintocamp-invitation#invitation
+      figure.p-kintocamp-invitation__backimage
+        img(src="./assets/img/bg_invitation.jpg" srcset="./assets/img/bg_invitation.jpg 1x, ./assets/img/bg_invitation@2x.jpg 2x" alt="")
+      .p-kintocamp-invitation__background
+
+      .p-kintocamp__inner.p-kintocamp-invitation__overview
+        h3.p-kintocamp-invitation__title.p-kintocamp__title 招待キャンペーン
+        .p-kintocamp-invitation__content
+          p.p-kintocamp-invitation__overviewStrong MyKINTOにご登録いただき、アンケートに答えると、<br class="u-show--pc">抽選で30組60名様に
+          p.p-kintocamp-invitation__overviewHeding <span class="p-kintocamp-invitation__overviewHedingStrong">KINTO CAMPご招待</span>が当たる！！
+          p.p-kintocamp-invitation__overviewDate 応募期間：<br class="u-s-br--show--sp">2002年9月23日（水）10：00～<br class="u-s-br--show--sp">10月4日（日）23：59
+      .p-kintocamp__inner
+        h3.p-kintocamp-invitation__heading “ワンランク上のキャンプ”を味わえる<br>KINTO CAMPへご招待
+        p.p-kintocamp-invitation__text
+          |以下の3コースから選んでご応募ください。<br>
+          |当選者は1組大人2名様を<br class="u-s-br--show--sp">ご招待させていただきます。<br class="u-s-br--show--sp">小学生以下のお子様は保護者同伴に限り<br class="u-s-br--show--sp">参加無料です。<br>
+          |中学生以上のご同伴者様は各コース規定の追加費用でご参加いただけます。<br>
+          |ご同伴者様は最大3名様までと<br class="u-s-br--show--sp">させていただきます。
+
+        .p-kintocamp-invitation__inCourse
+          h4.p-kintocamp-invitation__strong ～すべてのコースに含まれるもの～
+          p.p-kintocamp-invitation__strongList ・1組大人2名様のご招待<br>・駐車料金<br>・1日目の夜および2日目の朝の食事（人数分）<br>・各種アクティビティ参加（無料）<br>・デジタルデバイス
+    section.p-kintocamp-course
+      // コースA
+      .p-kintocamp-course__area.p-kintocamp-course__area--a
+        .p-kintocamp__inner
+          .p-kintocamp-block.p-kintocamp-course__block
+            figure.p-kintocamp-course__image.p-kintocamp-block__image
+              img(src="./assets/img/img_sample.png" srcset="./assets/img/img_sample.png 1x, ./assets/img/img_sample@2x.png 2x")
+            p.p-kintocamp-course__courseName コースA
+            .p-kintocamp-block__content.p-kintocamp-course__blockContent
+              h4.p-kintocamp-course__blockHeading
+                span.p-kintocamp-course__blockHeadingStrong レンタカー＋キャンプ用品
+                span.p-kintocamp-course__blockHeadingStrong レンタル＋食事付ご招待券
+              ul.p-kintocamp-course__blockList
+                li.p-kintocamp-course__listItem レンタカー、キャンプ用品レンタル、食事付ご招待券がセットになったコースです。
+                li.p-kintocamp-course__listItem 自動車未保有・キャンプ用品未保有の方向けのコースです。
+                li.p-kintocamp-course__listItem 中学生以上のご同伴者様は1名につき5,000円で<br class="u-show--pc">参加いただけます。
+              p.p-kintocamp-course__blockNum
+                span.p-kintocamp-course__blockNumSet 5組
+                span.p-kintocamp-course__blockNumPeople 10名様
+          .p-kintocamp-course__heading 車両レンタル
+          .p-kintocamp-course__cars
+            .p-kintocamp-course__carsItem
+              figure.p-kintocamp-course__carsImage
+                img(src="./assets/img/car_voxy.png" srcset="./assets/img/car_voxy.png 1x, ./assets/img/car_voxy@2x.png 2x" alt="")
+              h5.p-kintocamp-course__carsHeading ヴォクシー<br>“MULTI UTILITY”
+              p.p-kintocamp-course__presentdby Presented by モデリスタ
+              p.p-kintocamp-course__carsNum 1組様
+
+            .p-kintocamp-course__carsItem
+              figure.p-kintocamp-course__carsImage
+                img(src="./assets/img/car_hiace.png" srcset="./assets/img/car_hiace.png 1x, ./assets/img/car_hiace@2x.png 2x" alt="")
+              h5.p-kintocamp-course__carsHeading ハイエース<br>“MULTI ROLE TRANSPORTER”
+              p.p-kintocamp-course__presentdby Presented by モデリスタ
+              p.p-kintocamp-course__carsNum 1組様
+
+            .p-kintocamp-course__carsItem
+              figure.p-kintocamp-course__carsImage
+                img(src="./assets/img/car_rav4.png" srcset="./assets/img/car_rav4.png 1x, ./assets/img/car_rav4@2x.png 2x" alt="")
+              h5.p-kintocamp-course__carsHeading RAV4
+              p.p-kintocamp-course__carsNum 3組様
+          ul.m-list__caption
+            li ご応募は18歳以上の普通自動車免許保持者に限ります。
+            li 車両レンタル・返却場所は当選された方と株式会社KINTOの当選者窓口でお打ち合わせの上決定させていただきます。
+            li ガソリンは満タンで貸出しますので、ご返却前に最寄りのガソリンスタンドで給油してください。その分の費用はご負担ください。
+            li 高速代は自己負担となります。
+            li ヴォクシーおよびハイエースには外装ラッピング＆エアロパーツが装着されています。
+            li 実際の仕様とは一部異なる場合がございます。
+            li ボディカラーはイメージと異なる可能性がございます。
+
+
+          h3.p-kintocamp-course__heading キャンプ用品
+          .p-kintocamp-course__supplies
+            .p-kintocamp-course__suppliesImage
+              img(src="./assets/img/img_supplies.jpg" srcset="./assets/img/img_supplies.jpg 1x, ./assets/img/img_supplies@2x.jpg 2x" alt="キャンプ用品")
+            .p-kintocamp-course__suppliesContent
+              h5.p-kintocamp-course__suppliesHeding
+                span これさえあれば、キャンプ
+                span 場での宿泊ができる！
+              ul.p-kintocamp-course__suppliesList
+                li.p-kintocamp-course__suppliesListItem テント
+                li.p-kintocamp-course__suppliesListItem タープ
+                li.p-kintocamp-course__suppliesListItem テーブル
+                li.p-kintocamp-course__suppliesListItem ランタン
+                li.p-kintocamp-course__suppliesListItem 快眠マット
+                li.p-kintocamp-course__suppliesListItem 寝袋
+                li.p-kintocamp-course__suppliesListItem チェア
+                li.p-kintocamp-course__suppliesListItem キャンプ飯の調理器具
+          ul.m-list__caption
+            li ご同伴者様分も含め、チェア、快眠マット、寝袋は人数分ご用意します。
+            li 会場でのレンタル、回収となります。
+            li その他必要な用品はお客様各自でご用意いただくようお願いいたします。
+            li セット内容は変更になる可能性がございます。
+
+      // コースB
+      .p-kintocamp-course__area.p-kintocamp-course__area--b
+        .p-kintocamp__inner
+          .p-kintocamp-block.p-kintocamp-course__block
+            figure.p-kintocamp-course__image.p-kintocamp-block__image
+              img(src="./assets/img/img_courseb.jpg" srcset="./assets/img/img_courseb.jpg 1x, ./assets/img/img_courseb@2x.jpg 2x")
+            p.p-kintocamp-course__courseName コースB
+            .p-kintocamp-block__content.p-kintocamp-course__blockContent
+              h4.p-kintocamp-course__blockHeading
+                span.p-kintocamp-course__blockHeadingStrong キャンプ用品レンタル
+                span.p-kintocamp-course__blockHeadingStrong ＋食事付ご招待券
+              ul.p-kintocamp-course__blockList
+                li.p-kintocamp-course__listItem キャンプ用品レンタル、食事付ご招待券がセットになったコースです。
+                li.p-kintocamp-course__listItem キャンプ用品未保有者の方向けのコースです。
+                li.p-kintocamp-course__listItem ご同伴者様追加料金（中学生以上）：1名につき5,000円。
+              p.p-kintocamp-course__blockNum
+                span.p-kintocamp-course__blockNumSet 10組
+                span.p-kintocamp-course__blockNumPeople 20名様
+            ul.m-list__caption
+              li キャンプ用品の内容はAコースと同じです。
+              li キャンプ場まではご自身の車でご来場ください。
+
+      // コースC
+      .p-kintocamp-course__area.p-kintocamp-course__area--c
+        .p-kintocamp__inner
+          .p-kintocamp-block.p-kintocamp-course__block
+            figure.p-kintocamp-course__image.p-kintocamp-block__image
+              img(src="./assets/img/img_coursec.jpg" srcset="./assets/img/img_coursec.jpg 1x, ./assets/img/img_coursec@2x.jpg 2x" alt="")
+            p.p-kintocamp-course__courseName コースC
+            .p-kintocamp-block__content.p-kintocamp-course__blockContent
+              h4.p-kintocamp-course__blockHeading
+                span.p-kintocamp-course__blockHeadingStrong 食事付ご招待券
+              ul.p-kintocamp-course__blockList
+                li.p-kintocamp-course__listItem 食事付ご招待券をプレゼントするコースです。
+                li.p-kintocamp-course__listItem キャンプ経験者の方向けのコースです。
+                li.p-kintocamp-course__listItem ご同伴者様追加料金（中学生以上）：1名につき1,000円。
+              p.p-kintocamp-course__blockNum
+                span.p-kintocamp-course__blockNumSet 15組
+                span.p-kintocamp-course__blockNumPeople 30名様
+            ul.m-list__caption
+              li キャンプ場まではご自身の車でご来場ください。
+              li キャンプ用品はお客様各自でご用意いただくようお願いいたします。
+      // プレゼント
+      .p-kintocamp-course__prezent
+        .p-kintocamp__inner
+          p.p-kintocamp-course__prezentTx
+            |さらに！<br>
+            |応募者全員に、<br>
+            |<span class="p-kintocamp-course__prezentTxStrong">オリジナルステッカー</span>をプレゼント！
+
+    section.p-kintocamp-application
+      .p-kintocamp__inner
+        h3.p-kintocamp-application__title.p-kintocamp__title 応募方法
+        dl.p-kintocamp-application__step
+          dt.p-kintocamp-application__stepNo STEP1
+          dd.p-kintocamp-application__stepText まずはKINTOメンバー登録！<br>メンバー登録画面にて、メールアドレス・パスワードをご登録いただきKINTOメンバーにご加入いただきます。<br>※登録後、確認メールが送付されますので、登録完了URLをクリックの上、メンバー登録を行ってください。
+        dl.p-kintocamp-application__step
+          dt.p-kintocamp-application__stepNo STEP2
+          dd.p-kintocamp-application__stepText KINTOメンバー専用ページ（My KINTO）にログイン。<br>登録されたメールアドレス・パスワードでマイページにログインしてください。（TOP画面右上）<br>
+        dl.p-kintocamp-application__step
+          dt.p-kintocamp-application__stepNo STEP3
+          dd.p-kintocamp-application__stepText KINTO CAMPのバナーをクリック。<br>
+        dl.p-kintocamp-application__step
+          dt.p-kintocamp-application__stepNo STEP4
+          dd.p-kintocamp-application__stepText アンケートに回答して、応募する。<br>
+
+        h4.p-kintocamp-course__heading キャンペーン応募はこちらから！
+        p.m-btn__wrp--center
+          a.m-btn__02(href="https://kinto-jp.com/customer/membership")
+            span.m-btn__text メンバー登録
+          a.m-btn__02(href="https://kinto-jp.com/customer/login")
+            pan.m-btn__text My KINTO ログイン
+        ul.m-list__caption
+          li 新型コロナウィルスによる移動の制限等が発生した場合、または弊社が安全を確保できないと判断した場合は、キャンペーンを中止させていただく場合がございます。KINTO特設ページ上にてお知らせをさせていただきます。
+          li 台風、地震、火災、大雪などの不可抗力や天災やその他や無得ない事情によりキャンセルとなることがございます。
+          li このイベントは、最大限の新型コロナウイルス対策を実施し行います。また参加にあたっては、事前の健康管理ならびにご来場時の健康チェック、感染者発生時の追跡にともなう登録を行っていただきます。
+          li キャンペーン・イベント規約をご確認後同意の上、応募をお願いいたします。
+    section.p-kintocamp-access#access
+      .p-kintocamp__inner
+        h3.p-kintocamp-access__title.p-kintocamp__title アクセス
+        figure.p-kintocamp-access__logo
+          img(src="./assets/img/logo_camp.svg" alt="KINTO CAMPE")
+        dl.p-kintocamp-access__data
+          dt.p-kintocamp-access__dataHd 開催日時
+          dd.p-kintocamp-access__dataTx 2020.10.24（SAT）・25（SUN）
+          dt.p-kintocamp-access__dataHd 開催場所
+          dd.p-kintocamp-access__dataTx ふもとっぱらキャンプ場（静岡県富士宮市麓156） <a href="https://goo.gl/maps/txmBbSAArcdp4VrG8" target="_blank" class="p-kintocamp-access__linkBlank">google map<img class="p-kintocamp-access__linkBlankImg" src="./assets/img/icn_blank.svg" alt="外部リンク"></a>
+    .p-kintocamp-pagination
+      a.p-kintocamp-pagination__item.js-pagination__button.is-cursor(href="#top")
+      a.p-kintocamp-pagination__item.js-pagination__button(href="#ability")
+      a.p-kintocamp-pagination__item.js-pagination__button(href="#invitation")
+      a.p-kintocamp-pagination__item.js-pagination__button(href="#access")

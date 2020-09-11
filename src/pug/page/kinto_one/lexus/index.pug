@@ -1,51 +1,53 @@
 extends ./../../../temp/_base
 prepend config-block
- - page_name = "KINTO for LEXUS｜【KINTO】クルマのサブスク、トヨタから"
- - meta.description = "なるほど、レクサスに、この持ち方。KINTO for LEXUSのページです。KINTOでは好きなレクサス車1台を、3年間お楽しみいただけます。常に新車のレクサスを楽しめる持ち方。【愛車サブスクリプションサービス「KINTO（キント）」公式サイト】好きなクルマ、乗りたいクルマを自由に選び、3年間お楽しみいただけます。"
- - meta.keywords = "toyota,トヨタ自動車,トヨタ,KINTO,キント,サブスクリプション,subscription,サブスク,KINTO ONE,レクサス,lexus,フルサービスリース,リース,借りる"
- - meta.url = "https://kinto-jp.com/kinto_one/lexus/"
- - meta.ogp_image_url = "https://kinto-jp.com/assets/img/pic_ogimage_002.jpg"
+  - page_name = "KINTO for LEXUS｜【KINTO】クルマのサブスク、トヨタから"
+  - meta.description = "なるほど、レクサスに、この持ち方。KINTO for LEXUSのページです。KINTOでは好きなレクサス車1台を、3年間お楽しみいただけます。常に新車のレクサスを楽しめる持ち方。【愛車サブスクリプションサービス「KINTO（キント）」公式サイト】好きなクルマ、乗りたいクルマを自由に選び、3年間お楽しみいただけます。"
+  - meta.keywords = "toyota,トヨタ自動車,トヨタ,KINTO,キント,サブスクリプション,subscription,サブスク,KINTO ONE,レクサス,lexus,フルサービスリース,リース,借りる"
+  - meta.url = "https://kinto-jp.com/kinto_one/lexus/"
+  - meta.ogp_image_url = "https://kinto-jp.com/assets/img/pic_ogimage_002.jpg"
 //-  - meta.ogp_image_url = "test"
+
+append config-block
+  - title = "KINTO for LEXUS｜【KINTO】クルマのサブスク、トヨタから"
 
 append stylesheet-block
   link(rel="stylesheet", href="/assets/style/contents/kinto_one/lexus/style.css")
 
 append javascript-block
-  script(src="/inc/column/js/column.js")
   script(src="/assets/javascripts/contents/kinto_one/lexus/app.js")
 
 block sitemap-json
   script(type='application/ld+json').
+    {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
       {
-      "@context": "http://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://kinto-jp.com/",
+          "name": "ホーム"
+          }
+        },
         {
           "@type": "ListItem",
-          "position": 1,
+          "position": 2,
           "item": {
-            "@id": "https://kinto-jp.com/",
-            "name": "ホーム"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@id": "https://kinto-jp.com/kinto_one/",
-              "name": "KINTO ONEとは"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@id": "https://kinto-jp.com/kinto_one/lexus/",
-              "name": "KINTO for LEXUS"
-            }
+            "@id": "https://kinto-jp.com/kinto_one/",
+            "name": "KINTO ONEとは"
           }
-        ]
-      }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://kinto-jp.com/kinto_one/lexus/",
+            "name": "KINTO for LEXUS"
+          }
+        }
+      ]
+    }
 block breadcrumb-block
   ul.m-bread__list
     li
@@ -53,7 +55,7 @@ block breadcrumb-block
     li
       a(href='../') KINTO ONEとは
     li
-      | KINTO for LEXU
+      | KINTO for LEXUS
 
 //- コンテンツ内容
 block content-block
@@ -85,7 +87,7 @@ block content-block
             img(src="./img/img_merit01.png", srcset="./img/img_merit01.png 1x, ./img/img_merit01@2x.png 2x", alt="")
           .p-lplexus_merit__content
             h4.p-lplexus_merit__heading2 3年ごとに新車に乗り換え
-            p.p-lplexus_merit__text KINTOのレクサスは3年契約のサブスクリプション。<br>3年ごとに乗り換えることができるため、最新のレクサスを楽しめます。法人契約も可能です。
+            p.p-lplexus_merit__text KINTOならレクサス車を3年間、サブスクリプションでお乗りいただけます。<br>3年ごとに乗り換えることができるため、最新のレクサスを楽しめます。法人契約も可能です。
 
         .p-lplexus_merit__block.l-cnt__main.p-lplexus_merit__block02
           h3.p-lplexus_merit__heading
@@ -114,7 +116,7 @@ block content-block
             h4.p-lplexus_merit__heading2 契約はWEBで完結、時間や手間を削減
             p.p-lplexus_merit__text WEBで契約をすることができるため、24時間いつでも自分の好きな時間・場所でクルマをご契約いただけます。
             h4.p-lplexus_merit__heading2 税金・保険・クルマの処分などの手間なし
-            p.p-lplexus_merit__text 税金・保険・クルマの処分などの手間なしで、3年後はクルマを返却するだけです。
+            p.p-lplexus_merit__text 税金支払い・保険の加入・クルマの処分などの手間なしで、3年後はクルマを返却するだけです。
 
     section.p-lplexus__suport.l-cnt__main
       .p-lplexus__grayBlock.p-lplexus__grayBlock--content
@@ -165,8 +167,7 @@ block content-block
         .p-lplexus_flex__block
           .p-lplexus_flex__block_content
             h4.p-lplexus_flex__heading2 プラン変更時の中途解約金が無料
-            p KINTO FLEX→KINTO ONE(レクサス車1台3年契約)へ変更時の中途解約金は無料です。またKINTO FLEXの3年3台プラン⇔3年6台プラン変更時も同様です。
-
+            p KINTO FLEXからKINTO ONE(レクサス車1台3年契約)へ変更時の中途解約金は無料です。またKINTO FLEXの3年3台プランと3年6台プラン間の変更時も同様です。
           .p-lplexus_flex__block_img
             img(src="./img/img_flex.png", srcset="./img/img_flex.png 1x, ./img/img_flex@2x.png 2x", alt="")
         p.m-btn__wrp--center: a.m-btn__02(href="/kinto_flex/plan/") <span class="m-btn__text">KINTO FLEXについて詳しく見る</span>
@@ -176,5 +177,14 @@ block content-block
     section.p-lplexus_useful
       .l-cnt__main
         h2.m-hdg__02.m-txt__normal--center お役立ち情報
-        #js-columns(data-incpath="/inc/column/kintoone_lexus.html")
+        ul.m-card02__wrp
+          li.m-card02__item: a.m-card02__link(href="https://magazine.kinto-jp.com/column/20200424-1.html" target="_blank")
+            .m-card02__img: img.m_pic(src="/inc/column/img/pic_tax_savings.jpg" alt="【個人事業主は必見】車の経費計上方法や節税効果を紹介！")
+            .m-card02__txt 【個人事業主は必見】車の経費計上方法や節税効果を紹介！
+          li.m-card02__item: a.m-card02__link(href="https://magazine.kinto-jp.com/column/20200623-1.html" target="_blank")
+            .m-card02__img: img.m_pic(src="/inc/column/img/pic_online.jpg" alt="車の買い方に新しい選択肢！ネットから申し込む方法も登場")
+            .m-card02__txt 車の買い方に新しい選択肢！ネットから申し込む方法も登場
+          li.m-card02__item: a.m-card02__link(href="https://magazine.kinto-jp.com/column/20200831-1.html" target="_blank")
+            .m-card02__img: img.m_pic(src="/inc/column/img/pic_car_cost_eye.jpg" alt="車の維持費は年間いくら？自動車税・自動車保険・車検費用など計算すべき項目解説！")
+            .m-card02__txt 車の維持費は年間いくら？自動車税・自動車保険・車検費用など計算すべき項目解説！
         p.m-btn__wrp--center: a.m-btn__02(href="https://magazine.kinto-jp.com/" target="_blank") <span class="m-btn__text">お役立ち情報を見る</span>
