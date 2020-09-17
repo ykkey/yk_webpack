@@ -111,13 +111,13 @@ module.exports = {
           }
         ]
       },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/,	
-        loader: 'file-loader',	
-        options: {	
-          name: '/[path][name].[ext]'	
-        }	
-      },
+      // {
+      //   test: /\.(jpe?g|png|gif|svg)$/,	
+      //   loader: 'file-loader',	
+      //   options: {	
+      //     name: '/[path][name].[ext]'	
+      //   }	
+      // },
       // {
       //   test: /\.(jpe?g|png|gif|ico|woff|woff2|eot|ttf|svg|woff|woff2|ttf)(\?[a-z0-9=.]+)?$/,
       //   use: [{

@@ -1,13 +1,13 @@
 extends ./../../../temp/_base
 prepend config-block
-  - meta.description = ""
-  - meta.keywords = "toyota,トヨタ自動車,トヨタ,KINTO,キント,サブスクリプション,subscription,サブスク,KINTO ONE,レクサス,lexus,フルサービスリース,リース,借りる"
+  - meta.description = "KINTO CAMPとは、初のKINTO主催キャンプイベントです。抽選でご招待された方々限定でキャンプを行います。クルマを持っていない方も、キャンプがはじめての方も、KINTOと一緒に“一ランク上のキャンプ”を体験をしてみませんか？"
+  - meta.keywords = "キャンペーン,toyota,トヨタ自動車,トヨタ,KINTO,キント,サブスクリプション,subscription,サブスク,KINTO ONE,愛車,愛車ポイント,アクティビティ,GO OUT,キャンプ,クルマのサブスク、トヨタから"
   - meta.url = "https://kinto-jp.com//campaign/cp-kintocamp/"
-  - meta.ogp_image_url = "https://kinto-jp.com/assets/img/pic_ogimage_002.jpg"
+  - meta.ogp_image_url = "https://kinto-jp.com/campaign/cp-kintocamp/ogp.png"
 //-  - meta.ogp_image_url = "test"
 
 append config-block
-  - title = "KINTO CAMPE｜【KINTO】クルマのサブスク、トヨタから"
+  - title = "KINTO CAMP supported by GO OUT招待キャンペーン｜【KINTO】クルマのサブスク、トヨタから"
 
 append stylesheet-block
   link(rel="stylesheet", href="/assets/style/contents/campaign/cp-kintocamp/style.css")
@@ -60,15 +60,15 @@ block breadcrumb-block
 block content-block
   // TODP: Hタグ見直す
   .p-kintocamp.m-conent__full
-    section.p-kintocamp-mainVisual.is-kintocamp-show#top
+    section.p-kintocamp-mainVisual#top
       .p-kintocamp-mainVisual__bg
         img(src="./assets/img/bg_main.jpg" srcset="./assets/img/bg_main.jpg 1x, ./assets/img/bg_main@2x.jpg 2x" alt="KINTO CAMP")
       .p-kintocamp-mainVisual__inner
         h1.p-kintocamp-mainVisual__title
           span.p-kintocamp-mainVisual__title_camp
-            include ./svg/kintcam.svg
+            img.p-kintocamp-mainVisual__svg(src="./assets/img/ttl_kintcam.svg" alt="KINTO CAMP")
           span.p-kintocamp-mainVisual__title_supported
-            include ./svg/supported.svg
+            img.p-kintocamp-mainVisual__svg(src="./assets/img/ttl_supported.svg" alt="supported by GO OUT")
         p.p-kintocamp-mainVisual__subtitle 招待キャンペーン
         p.p-kintocamp-mainVisual__date 2020.10.24（SAT）・25（SUN）ふもとっぱらキャンプ場
     // KINTO CAMPとは？
@@ -98,7 +98,7 @@ block content-block
 
     section.p-kintocamp-ability#ability
       .p-kintocamp__inner
-        h3.p-kintocamp-ability__title.p-kintocamp__title.js-animationItem
+        h2.p-kintocamp-ability__title.p-kintocamp__title.js-animationItem
           - var titleWords = ['K','I','N','T','O',' ','ア','ク','テ','ィ','ビ','テ','ィ']
           each word in titleWords
             span.p-kintocamp__titleWord #{word}
@@ -125,7 +125,7 @@ block content-block
           img(src="./assets/img/img_car.gif" alt="")
 
       .p-kintocamp__inner.p-kintocamp-invitation__overview.js-animationItem
-        h3.p-kintocamp-invitation__title.p-kintocamp__title.js-animationItem
+        h2.p-kintocamp-invitation__title.p-kintocamp__title.js-animationItem
           - var titleWords = ['招','待','キ','ャ','ン','ペ','ー','ン']
           each word in titleWords
             span.p-kintocamp__titleWord #{word}
@@ -133,7 +133,7 @@ block content-block
           p.p-kintocamp-invitation__overviewStrong MyKINTOにご登録いただき、アンケートに答えると、<br class="u-show--pc">抽選で30組60名様に
           p.p-kintocamp-invitation__overviewHeding <span class="p-kintocamp-invitation__overviewHedingStrong">KINTO CAMPご招待</span>が当たる！！
           p.p-kintocamp-invitation__overviewDate 応募期間：<br class="u-s-br--show--sp">2002年9月23日（水）10：00～<br class="u-s-br--show--sp">10月4日（日）23：59
-      .p-kintocamp__inner.js-animationItem
+      .p-kintocamp__inner.js-animationItem.p-kintocamp-invitation__detailContent
         h3.p-kintocamp-invitation__heading “ワンランク上のキャンプ”を味わえる<br>KINTO CAMPへご招待
         p.p-kintocamp-invitation__text
           |以下の3コースから選んでご応募ください。<br>
@@ -143,7 +143,7 @@ block content-block
 
         .p-kintocamp-invitation__inCourse
           h4.p-kintocamp-invitation__strong すべてのコースには食事付ご招待券が含まれます！
-          p.p-kintocamp-invitation__strongList ・1組大人2名様のご招待<br>・駐車料金<br>・1日目の夜および2日目の朝の食材（人数分）<br>・各種アクティビティ参加（無料）<br>・デジタルデバイスレンタル（モバイルプロジェクター、アクションカメラなど）
+          p.p-kintocamp-invitation__strongList ・1組大人2名様のご招待<br>・駐車料金<br>・各種アクティビティ参加（無料）<br>・デジタルデバイスレンタル（モバイルプロジェクター、アクションカメラなど）<br>・1日目の夜および2日目の朝の食材（人数分）
           p ※キャンプ飯講座にて、ご自身で調理していただきます。
     section.p-kintocamp-course
       // コースA
@@ -155,8 +155,8 @@ block content-block
                 figure.p-kintocamp-course__image.p-kintocamp-block__image.p-kintocamp-aniBorder--none1
                   .p-kintocamp-aniBorder--none2
                     img.p-kintocamp-aniBorder__inner(src="./assets/img/img_coursea.jpg" srcset="./assets/img/img_coursea.jpg 1x, ./assets/img/img_coursea@2x.jpg 2x")
-                p.p-kintocamp-course__courseName
-                  - var titleWords = ['コ','ー','ス','A']
+                h3.p-kintocamp-course__courseName
+                  - var titleWords = ['A','コ','ー','ス']
                   each word in titleWords
                     span.p-kintocamp-course__courseNameWord #{word}
                 .p-kintocamp-block__content.p-kintocamp-course__blockContent.p-kintocamp-aniBorder--none1
@@ -172,7 +172,9 @@ block content-block
                       p.p-kintocamp-course__blockNum
                         span.p-kintocamp-course__blockNumSet 5組
                         span.p-kintocamp-course__blockNumPeople 10名様
-          .p-kintocamp-course__heading.js-animationItem 車両レンタル
+          ul.m-list__caption.js-animationItem
+            li 写真はイメージです
+          h4.p-kintocamp-course__heading.js-animationItem 車両レンタル
           .p-kintocamp-course__cars
             .p-kintocamp-course__carsItem.js-animationItem.p-kintocamp-aniBorder--1
               .p-kintocamp-aniBorder--2
@@ -203,13 +205,14 @@ block content-block
             li ご応募は18歳以上の普通自動車免許保持者に限ります。
             li 車両レンタル・返却場所は当選された方と株式会社KINTOの当選者窓口でお打ち合わせの上決定させていただきます。
             li ガソリンは満タンで貸出しますので、ご返却前に最寄りのガソリンスタンドで給油してください。その分の費用はご負担ください。
-            li 高速代・有料道路の通行料その他移動にかかる費用は自己負担となります。
+            li 高速代・有料道路の通行料、その他移動にかかる費用は自己負担となります。
             li ヴォクシーおよびハイエースには外装ラッピング＆エアロパーツが装着されています。
+            li RAV4は車種変更になる可能性がございます。
             li 実際の仕様とは一部異なる場合がございます。
             li ボディカラーはイメージと異なる可能性がございます。
 
 
-          h3.p-kintocamp-course__heading.js-animationItem キャンプ用品
+          h4.p-kintocamp-course__heading.js-animationItem キャンプ用品
           .p-kintocamp-course__supplies.p-kintocamp-aniFadein--defo.js-animationItem
             .p-kintocamp-course__suppliesImage
               img(src="./assets/img/img_supplies.jpg" srcset="./assets/img/img_supplies.jpg 1x, ./assets/img/img_supplies@2x.jpg 2x" alt="キャンプ用品")
@@ -219,7 +222,6 @@ block content-block
                 span 場での宿泊ができる！
               ul.p-kintocamp-course__suppliesList
                 li.p-kintocamp-course__suppliesListItem テント
-                li.p-kintocamp-course__suppliesListItem タープ
                 li.p-kintocamp-course__suppliesListItem テーブル
                 li.p-kintocamp-course__suppliesListItem ランタン
                 li.p-kintocamp-course__suppliesListItem 快眠マット
@@ -231,6 +233,7 @@ block content-block
             li 会場でのレンタル、回収となります。
             li その他必要な用品はお客様各自でご用意いただくようお願いいたします。
             li セット内容は変更になる可能性がございます。
+            li 写真はイメージです。
 
       // コースB
       .p-kintocamp-course__area.p-kintocamp-course__area--b
@@ -241,18 +244,18 @@ block content-block
                 figure.p-kintocamp-course__image.p-kintocamp-block__image.p-kintocamp-aniBorder--none1
                   .p-kintocamp-aniBorder--none2
                     img.p-kintocamp-aniBorder__inner(src="./assets/img/img_courseb.jpg" srcset="./assets/img/img_courseb.jpg 1x, ./assets/img/img_courseb@2x.jpg 2x")
-                p.p-kintocamp-course__courseName.js-animationItem
-                  - var titleWords = ['コ','ー','ス','B']
+                h3.p-kintocamp-course__courseName.js-animationItem
+                  - var titleWords = ['B','コ','ー','ス']
                   each word in titleWords
                     span.p-kintocamp-course__courseNameWord #{word}
                 .p-kintocamp-block__content.p-kintocamp-course__blockContent.p-kintocamp-aniBorder--none1
                   .p-kintocamp-aniBorder--none2
                     .p-kintocamp-aniBorder__inner
                       h4.p-kintocamp-course__blockHeading
-                        span.p-kintocamp-course__blockHeadingStrong キャンプ用品レンタル
-                        span.p-kintocamp-course__blockHeadingStrong ＋食事付ご招待券
+                        span.p-kintocamp-course__blockHeadingStrong 食事付ご招待券
+                        span.p-kintocamp-course__blockHeadingStrong ＋キャンプ用品レンタル
                       ul.p-kintocamp-course__blockList
-                        li.p-kintocamp-course__listItem キャンプ用品レンタル、食事付ご招待券がセットになったコースです。
+                        li.p-kintocamp-course__listItem キャンプ用品レンタルと食事付ご招待券がセットになったコースです。
                         li.p-kintocamp-course__listItem キャンプ用品未保有者の方向けのコースです。
                         li.p-kintocamp-course__listItem ご同伴者様追加料金（中学生以上）：1名につき5,000円。
                       p.p-kintocamp-course__blockNum
@@ -261,6 +264,7 @@ block content-block
           ul.m-list__caption.js-animationItem
             li キャンプ用品の内容はAコースと同じです。
             li キャンプ場まではご自身の車でご来場ください。
+            li 写真はイメージです。
 
       // コースC
       .p-kintocamp-course__area.p-kintocamp-course__area--c
@@ -271,8 +275,8 @@ block content-block
                 figure.p-kintocamp-course__image.p-kintocamp-block__image.p-kintocamp-aniBorder--none1
                   .p-kintocamp-aniBorder--none2
                     img.p-kintocamp-aniBorder__inner(src="./assets/img/img_coursec.jpg" srcset="./assets/img/img_coursec.jpg 1x, ./assets/img/img_coursec@2x.jpg 2x" alt="")
-                p.p-kintocamp-course__courseName
-                  - var titleWords = ['コ','ー','ス','C']
+                h3.p-kintocamp-course__courseName
+                  - var titleWords = ['C','コ','ー','ス']
                   each word in titleWords
                     span.p-kintocamp-course__courseNameWord #{word}
                 .p-kintocamp-block__content.p-kintocamp-course__blockContent.p-kintocamp-aniBorder--none1
@@ -290,11 +294,14 @@ block content-block
           ul.m-list__caption.js-animationItem
             li キャンプ場まではご自身の車でご来場ください。
             li キャンプ用品はお客様各自でご用意いただくようお願いいたします。
+            li 写真はイメージです。
+
       // プレゼント
       .p-kintocamp-course__prezent
         .p-kintocamp-course__prezent__background
-          include ./svg/background_pc.svg
-          include ./svg/background.svg
+          .p-kintocamp-course__prezent__backgroundSVG
+            img.u-show--pc.p-kintocamp-course__prezentSVG(src="./assets/img/background_pc.svg" alt="")
+            include ./svg/background.svg
 
         .p-kintocamp__inner.p-kintocamp-course__prezent__inner
           p.p-kintocamp-course__prezent__text
@@ -306,7 +313,7 @@ block content-block
 
     section.p-kintocamp-application
       .p-kintocamp__inner
-        h3.p-kintocamp-application__title.p-kintocamp__title.js-animationItem
+        h2.p-kintocamp-application__title.p-kintocamp__title.js-animationItem
           - var titleWords = ['応','募','方','法']
           each word in titleWords
             span.p-kintocamp__titleWord #{word}
@@ -319,7 +326,9 @@ block content-block
             dd.p-kintocamp-application__stepText KINTOメンバー専用ページ（My KINTO）にログイン。<br>登録されたメールアドレス・パスワードでマイページにログインしてください。（TOP画面右上）<br>
           dl.p-kintocamp-application__step
             dt.p-kintocamp-application__stepNo STEP3
-            dd.p-kintocamp-application__stepText KINTO CAMPのバナーをクリック。<br>
+            dd.p-kintocamp-application__stepText
+              |ログイン後、下記のKINTO CAMPバナーをクリック。<br>
+              img.p-kintocamp-application__step3img(src="./assets/img/img_stepbnr.jpg" alt="バナーサンプル")
           dl.p-kintocamp-application__step
             dt.p-kintocamp-application__stepNo STEP4
             dd.p-kintocamp-application__stepText アンケートに回答して、応募する。<br>
@@ -335,9 +344,12 @@ block content-block
           li 台風、地震、火災、大雪などの不可抗力や天災やその他や無得ない事情によりキャンセルとなることがございます。
           li このイベントは、最大限の新型コロナウイルス対策を実施し行います。また参加にあたっては、事前の健康管理ならびにご来場時の健康チェック、感染者発生時の追跡にともなう登録を行っていただきます。
           li キャンペーン・イベント規約をご確認後同意の上、応募をお願いいたします。
+        p.m-link__textarrow
+          a(href="./assets/pdf/camp_terms.pdf" target="_blank") 応募規約
+          a(href="https://faq.kinto-jp.com/usr/file/attachment/SppvUavJl4AkxyYI.html" target="_blank") FAQ
     section.p-kintocamp-access#access.js-animationItem
       .p-kintocamp__inner
-        h3.p-kintocamp-access__title.p-kintocamp__title.js-animationItem
+        h2.p-kintocamp-access__title.p-kintocamp__title.js-animationItem
           - var titleWords = ['ア','ク','セ','ス']
           each word in titleWords
             span.p-kintocamp__titleWord #{word}
@@ -348,16 +360,10 @@ block content-block
           dd.p-kintocamp-access__dataTx 2020.10.24（SAT）・25（SUN）
           dt.p-kintocamp-access__dataHd 開催場所
           dd.p-kintocamp-access__dataTx ふもとっぱらキャンプ場（静岡県富士宮市麓156） <a href="https://goo.gl/maps/txmBbSAArcdp4VrG8" target="_blank" class="p-kintocamp-access__linkBlank">google map<img class="p-kintocamp-access__linkBlankImg" src="./assets/img/icn_blank.svg" alt="外部リンク"></a>
+          dt.p-kintocamp-access__dataHd お問合せ
+          dd.p-kintocamp-access__dataTx KINTOカスタマーセンター 0120-075-910<br>受付時間 9：00～18：00 年中無休（年末年始を除く）
     .p-kintocamp-pagination
       a.p-kintocamp-pagination__item.js-pagination__button.is-cursor(href="#top")
-        span.p-kintocamp-pagination__item_r
-        span.p-kintocamp-pagination__item_l
       a.p-kintocamp-pagination__item.js-pagination__button(href="#ability")
-        span.p-kintocamp-pagination__item_r
-        span.p-kintocamp-pagination__item_l
       a.p-kintocamp-pagination__item.js-pagination__button(href="#invitation")
-        span.p-kintocamp-pagination__item_r
-        span.p-kintocamp-pagination__item_l
       a.p-kintocamp-pagination__item.js-pagination__button(href="#access")
-        span.p-kintocamp-pagination__item_r
-        span.p-kintocamp-pagination__item_l
