@@ -40,12 +40,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ykkey/yk_webpack.git"
+    "url": "git+https://github.com/yukiko-sano/personal_env.git"
   },
   "bugs": {
-    "url": "https://github.com/ykkey/yk_webpack/issues"
+    "url": "https://github.com/yukiko-sano/personal_env/issues"
   },
-  "homepage": "https://github.com/ykkey/yk_webpack#readme",
+  "homepage": "https://github.com/yukiko-sano/personal_env#readme",
   "dependencies": {
     "webpack-route-data-mapper": "^2.2.2"
   }
